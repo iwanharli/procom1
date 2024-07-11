@@ -52,6 +52,9 @@
 <link href="{{ asset('assets/_portal/css/skyblue-theme.css') }}" rel="alternate stylesheet" title="skyblue-theme">
 <link href="{{ asset('assets/_portal/css/violet-theme.css') }}" rel="alternate stylesheet" title="violet-theme">
 
+{{-- AWESOME --}}
+<script src="https://kit.fontawesome.com/4545cc9fe6.js" crossorigin="anonymous"></script>
+
 <!-- RESPONSIVE CSS -->
 <link href="{{ asset('assets/_portal/css/responsive.css') }}" rel="stylesheet">
 

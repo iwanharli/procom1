@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- FEATURES-2
-                ============================================= -->
+                                ============================================= -->
     <section id="features-2" class="py-100 mt-50 features-section division">
         <div class="container">
 
@@ -15,10 +15,12 @@
                     <div class="section-title mb-80">
 
                         <!-- Title -->
-                        <h2 class="h2-xl">The Complete Solutions</h2>
+                        <h2 class="h2-xl">Solusi Lengkap untuk Kebutuhan Anda</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Ligula risus auctor tempus magna feugiat lacinia fusce blandit</p>
+                        <p class="p-xl">Kami menawarkan solusi menyeluruh yang dirancang untuk meningkatkan efisiensi dan
+                            keamanan bisnis Anda. Dengan pendekatan komprehensif dan teknologi terkini, kami memastikan
+                            setiap aspek kebutuhan IT Anda terpenuhi dengan sempurna.</p>
 
                     </div>
                 </div>
@@ -31,219 +33,40 @@
 
 
                     <!-- FEATURE BOX #1 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-1 wow animate__animated animate__fadeInUp">
+                    @foreach ($services as $key => $value)
+                        <div class="col">
+                            <div class="fbox-2 fb-1 wow animate__animated animate__fadeInUp">
 
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
+                                <!-- Icon -->
+                                <div class="fbox-ico-wrap">
+                                    <div class="fbox-ico color--theme ico-55">
+                                        <div class="shape-ico color--theme">
 
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-innovation"></span>
+                                            <!-- Vector Icon -->
+                                            <span class="{{ $value['icon'] }}" style="font-size: 3em"></span>
 
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
+                                            <!-- Shape -->
+                                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                                                    transform="translate(100 100)" />
+                                            </svg>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>Branding Services</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
-                            </div>
-
-                        </div>
-                    </div> <!-- END FEATURE BOX #1 -->
-
-
-                    <!-- FEATURE BOX #2 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-2 wow animate__animated animate__fadeInUp">
-
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
-
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-pie-chart-1"></span>
-
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
-
-                                    </div>
+                                <!-- Text -->
+                                <div class="fbox-txt">
+                                    <h5>{{ @$value['title'] }}</h5>
+                                    <p>{!! @$value['description'] !!}
+                                    </p>
                                 </div>
-                            </div>
 
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>Market Research</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
                             </div>
-
                         </div>
-                    </div> <!-- END FEATURE BOX #2 -->
-
-
-                    <!-- FEATURE BOX #3 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-3 wow animate__animated animate__fadeInUp">
-
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
-
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-interface"></span>
-
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>Content Creation</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
-                            </div>
-
-                        </div>
-                    </div> <!-- END FEATURE BOX #3 -->
-
-
-                    <!-- FEATURE BOX #4 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-4 wow animate__animated animate__fadeInUp">
-
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
-
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-shopping-cart"></span>
-
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>e-Commerce Solutions</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
-                            </div>
-
-                        </div>
-                    </div> <!-- END FEATURE BOX #4 -->
-
-
-                    <!-- FEATURE BOX #5 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-5 wow animate__animated animate__fadeInUp">
-
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
-
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-podium"></span>
-
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>Competitor Analysis</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
-                            </div>
-
-                        </div>
-                    </div> <!-- END FEATURE BOX #5 -->
-
-
-                    <!-- FEATURE BOX #6 -->
-                    <div class="col">
-                        <div class="fbox-2 fb-6 wow animate__animated animate__fadeInUp">
-
-                            <!-- Icon -->
-                            <div class="fbox-ico-wrap">
-                                <div class="fbox-ico color--theme ico-55">
-                                    <div class="shape-ico color--theme">
-
-                                        <!-- Vector Icon -->
-                                        <span class="flaticon-search"></span>
-
-                                        <!-- Shape -->
-                                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                                                transform="translate(100 100)" />
-                                        </svg>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Text -->
-                            <div class="fbox-txt">
-                                <h5>SEO & SMM Services</h5>
-                                <p>Porta semper lacus cursus feugiat a primis ligula ultrice risus an auctor tempus
-                                    feugiat
-                                    diam turpis impedit auctor felis and augue mauris blandit
-                                </p>
-                            </div>
-
-                        </div>
-                    </div> <!-- END FEATURE BOX #6 -->
+                    @endforeach
+                    <!-- END FEATURE BOX #1 -->
 
 
                 </div> <!-- End row -->
@@ -255,7 +78,7 @@
     <!-- END FEATURES-2 -->
 
     <!-- BOX CONTENT
-                ============================================= -->
+                                ============================================= -->
     <section class="bc-01 ws-wrapper content-section">
         <div class="container">
             <div class="bc-01-wrapper bg--02 bg--fixed r-16">
@@ -282,18 +105,20 @@
                                 <span class="section-id">Strategies That Work</span>
 
                                 <!-- Title -->
-                                <h2>Digital marketing with real results</h2>
+                                <h2>Solusi Digital Efektif</h2>
 
                                 <!-- Text -->
-                                <p>Sodales tempor sapien diam quaerat congue primis ipsum laoreet turpis neque
-                                    auctor vitae
-                                    fusce dolor laoreet placerat magna ligula and cursus purus nulla
+                                <p>Kami menyediakan solusi "all-in-one" yang komprehensif untuk memenuhi berbagai kebutuhan
+                                    teknologi perusahaan Anda. Dari pengembangan aplikasi dan desain web hingga integrasi
+                                    sistem dan manajemen proyek, kami menghadirkan layanan yang menyeluruh untuk memastikan
+                                    efisiensi dan kesuksesan bisnis Anda.
                                 </p>
 
                                 <!-- Text -->
-                                <p class="mb-0">Tempor sapien sodales diam quaerat congue primis ipsum laoreet
-                                    turpis neque
-                                    auctor vitae fusce dolor laoreet placerat magna ligula and cursus sagittis
+                                <p class="mb-0">Tim ahli kami tidak hanya fokus pada kualitas teknis, tetapi juga memahami
+                                    pentingnya strategi bisnis yang terintegrasi dan berkelanjutan. Dengan pendekatan yang
+                                    terpadu, kami siap membantu Anda menghadapi tantangan teknologi dengan solusi yang
+                                    inovatif dan dapat diandalkan.
                                 </p>
 
                             </div>
@@ -308,7 +133,7 @@
     <!-- END BOX CONTENT -->
 
     <!-- INTEGRATIONS-4
-            ============================================= -->
+                            ============================================= -->
     <section id="integrations-4" class="pt-100 pb-100 integrations-section division">
         <div class="container">
 
@@ -319,10 +144,12 @@
                     <div class="section-title mb-70">
 
                         <!-- Title -->
-                        <h2 class="h2-xl">Seamless integration with all your essential tools</h2>
+                        <h2 class="h2-xl">Beragam Teknologi untuk Beragam Kebutuhan</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Ligula risus auctor tempus magna feugiat lacinia fusce blandit</p>
+                        <p class="p-xl">Kami siap menyediakan solusi yang sesuai dengan tantangan teknologi Anda. Kami
+                            memahami keunikannya setiap kebutuhan teknologi, dan kami menyediakan berbagai solusi inovatif
+                            untuk mendukung kesuksesan bisnis Anda.</p>
 
                     </div>
                 </div>
@@ -335,149 +162,18 @@
 
 
                     <!-- INTEGRATION TOOL #1 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/zapier.png') }}"
-                                    alt="tool-logo">
-                                <h6>Zapier</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #1 -->
-
-
-                    <!-- INTEGRATION TOOL #2 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/intercom.png') }}"
-                                    alt="tool-logo">
-                                <h6>Intercom</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #2 -->
-
-
-                    <!-- INTEGRATION TOOL #3 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid lt-img"
-                                    src="{{ asset('assets/_portal/images/png_icons/zendesk.png') }}" alt="tool-logo">
-                                <img class="img-fluid dt-img"
-                                    src="{{ asset('assets/_portal/images/png_icons/zendesk-dark.png') }}" alt="tool-logo">
-                                <h6>Zendesk</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #3 -->
-
-
-                    <!-- INTEGRATION TOOL #4 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/slack.png') }}"
-                                    alt="tool-logo">
-                                <h6>Slack</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #4 -->
-
-
-                    <!-- INTEGRATION TOOL #5 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/trello.png') }}"
-                                    alt="tool-logo">
-                                <h6>Trello</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #5 -->
-
-
-                    <!-- INTEGRATION TOOL #6 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/notion.png') }}"
-                                    alt="tool-logo">
-                                <h6>Notion</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #6 -->
-
-
-                    <!-- INTEGRATION TOOL #7 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/discord.png') }}"
-                                    alt="tool-logo">
-                                <h6>Discord</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #7 -->
-
-
-                    <!-- INTEGRATION TOOL #8 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/shopify.png') }}"
-                                    alt="tool-logo">
-                                <h6>Shopify</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #8 -->
-
-
-                    <!-- INTEGRATION TOOL #9 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/hubspot.png') }}"
-                                    alt="tool-logo">
-                                <h6>HubSpot</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #9 -->
-
-
-                    <!-- INTEGRATION TOOL #10 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/firebase.png') }}"
-                                    alt="tool-logo">
-                                <h6>Firebase</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #10 -->
-
-
-                    <!-- INTEGRATION TOOL #11 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/mailchimp.png') }}"
-                                    alt="tool-logo">
-                                <h6>MailChimp</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #11 -->
-
-
-                    <!-- INTEGRATION TOOL #12 -->
-                    <div class="col">
-                        <a href="#">
-                            <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/png_icons/zoom.png') }}"
-                                    alt="tool-logo">
-                                <h6>Zoom</h6>
-                            </div>
-                        </a>
-                    </div> <!-- END INTEGRATION TOOL #12 -->
+                    @foreach ($stacks as $key => $value)
+                        <div class="col">
+                            <a href="#">
+                                <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
+                                    <img class="img-fluid" src="{{ Storage::url('assets/stack/'.$value) }}"
+                                        alt="tool-logo">
+                                    <h6>{{ ucwords(str_replace(".png", "", $value)) }}</h6>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                    <!-- END INTEGRATION TOOL #1 -->
 
 
                 </div>
@@ -485,7 +181,7 @@
 
 
             <!-- MORE BUTTON -->
-            <div class="row">
+            <div class="row d-none">
                 <div class="col">
                     <div class="more-btn text-center mt-30 wow animate__animated animate__fadeInUp">
                         <a href="{{ route('integration') }}" class="btn r-06 btn--tra-black hover--theme">

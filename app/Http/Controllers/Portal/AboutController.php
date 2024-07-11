@@ -13,7 +13,7 @@ class AboutController extends Controller
             "bri.png", "cimb.png", "densus.png", "depkominfo.png", "fiduciary.png",
             "infocon.png", "intel.png", "jokowibasuki.png", "jokowijk.png",
             "kominfo.png", "mandiri.png", "mega.png", "pengayoman.png",
-            "prabowogibran.png", "scan.py", "sgu.png", "sthana.png",
+            "prabowogibran.png", "sgu.png", "sthana.png",
             "stsn.png", "tutwuri.png", "waskita.png", "yudisial.png"
         ];
 

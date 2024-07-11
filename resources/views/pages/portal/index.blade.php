@@ -17,9 +17,7 @@
                         <h2>Unleash your business with our smart solutions</h2>
 
                         <!-- Text -->
-                        <p class="p-lg">Mauris donec turpis suscipit sapien primis sapien sagittis tempor a
-                            volute ligula
-                            undo aliquet tortor
+                        <p class="p-lg">Maksimalkan potensi bisnis Anda dengan solusi cerdas dan inovatif kami.
                         </p>
 
                         <!-- Button -->
@@ -56,7 +54,7 @@
                         <h2 class="h2-xl">Handling your marketing needs in a better way</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Ligula risus auctor tempus magna feugiat lacinia fusce blandit</p>
+                        <p class="p-xl">Tingkatkan efektivitas pemasaran Anda dengan pendekatan kami yang lebih cerdas dan efisien.</p>
 
                     </div>
                 </div>
@@ -88,16 +86,13 @@
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p>Quaerat ipsum magna congue ipsum laoreet cursus placerat neque auctor
-                                            purus
-                                            quaerat
+                                        <p>
+                                            Ubah data menjadi wawasan berharga untuk keputusan yang lebih cerdas dan strategis.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Tempor sapien luctus egestas varius laoreet suscipit
-                                            ipsum a
-                                            purus sapien dolor cursus
+                                        <p class="mb-0">Maksimalkan efisiensi dan keuntungan bisnis Anda dengan solusi BI kami yang canggih.
                                         </p>
                                     </li>
 
@@ -139,15 +134,12 @@
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p>Tempor sapien luctus egestas varius laoreet suscipit ipsum a purus sapien
-                                            dolor cursus
+                                        <p>Satukan semua alat pemasaran Anda untuk kampanye yang lebih efisien dan kohesif.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Quaerat ipsum magna congue ipsum laoreet cursus placerat
-                                            neque
-                                            auctor purus quaerat
+                                        <p class="mb-0">Tingkatkan hasil pemasaran Anda dengan integrasi yang mulus dan strategi yang terkoordinasi.
                                         </p>
                                     </li>
 
@@ -204,16 +196,12 @@
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p>Tempor sapien quaerat ociis laoreet ipsum purus and sapien dolor ultrice
-                                            semper
-                                            undo aliquam congue purus and pretium
+                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Cursus purus suscipit vitae egestas augue volute placerat
-                                            undo vitae
-                                            ultrice sapien
+                                        <p class="mb-0">Tingkatkan kinerja dan efisiensi dengan pendekatan inovatif kami.
                                         </p>
                                     </li>
 
@@ -495,25 +483,22 @@
                         <span class="section-id">Our Strengths</span>
 
                         <!-- Title -->
-                        <h2>Why do people choose SolTech?</h2>
+                        <h2>Why do people choose Us?</h2>
 
                         <!-- Text -->
-                        <p>Sodales tempor sapien quaerat ipsum congue and undo laoreet turpis neque auctor turpis
-                            vitae dolor luctus placerat magna ligula cursus vitae
+                        <p>Kami dipilih karena komitmen kami dalam memberikan solusi yang tepat dan terpercaya untuk setiap kebutuhan bisnis Anda.
                         </p>
 
                         <!-- List -->
                         <ul class="simple-list">
 
                             <li class="list-item">
-                                <p>Tempor sapien quaerat undo ipsum laoreet and purus sapien a dolor ociis ultrice
-                                    ipsum aliquam congue a dolor cursus congue varius magnis
+                                <p>Kami berkomitmen untuk memberikan layanan terbaik dengan fokus pada kepuasan pelanggan dan inovasi yang berkelanjutan.
                                 </p>
                             </li>
 
                             <li class="list-item">
-                                <p class="mb-0">Cursus purus suscipit vitae cubilia magnis diam volute egestas
-                                    sapien ultrice auctor
+                                <p class="mb-0">Dengan pengalaman dan keahlian yang mendalam, kami siap membantu Anda mencapai tujuan bisnis Anda dengan lebih baik.
                                 </p>
                             </li>
 
@@ -556,7 +541,7 @@
                                     <h6 class="h6-lg">Innovation</h6>
 
                                     <!-- Text -->
-                                    <p>Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor</p>
+                                    <p>Temukan solusi terbaru dan terdepan untuk mendorong pertumbuhan bisnis Anda.</p>
 
                                 </div>
 
@@ -585,7 +570,7 @@
                                     <h6 class="h6-lg">Experience</h6>
 
                                     <!-- Text -->
-                                    <p>Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor</p>
+                                    <p>Manfaatkan keahlian kami dalam menyediakan solusi yang terbukti untuk mengoptimalkan operasi bisnis Anda.</p>
 
                                 </div>
 
@@ -621,7 +606,7 @@
                                     <h6 class="h6-lg">Quality</h6>
 
                                     <!-- Text -->
-                                    <p>Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor</p>
+                                    <p>Hadirkan produk dan layanan unggulan dengan standar tertinggi untuk kepuasan pelanggan yang optimal.</p>
 
                                 </div>
 
@@ -650,7 +635,7 @@
                                     <h6 class="h6-lg">Customer-First</h6>
 
                                     <!-- Text -->
-                                    <p>Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor</p>
+                                    <p>Kami berkomitmen untuk menyediakan layanan yang memprioritaskan kebutuhan dan kepuasan pelanggan sebagai fokus utama.</p>
 
                                 </div>
 

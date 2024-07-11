@@ -15,10 +15,10 @@
                     <div class="section-title mb-40">
 
                         <!-- Title -->
-                        <h2 class="h2-title">All we do is dream and craft amazing products</h2>
+                        <h2 class="h2-title">Solusi Terbaik Software dan Keamanan Anda</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Ligula risus auctor tempus magna feugiat lacinia fusce blandit</p>
+                        <p class="p-xl">kami berdedikasi untuk mewujudkan impian teknologi Anda menjadi kenyataan. Dengan keahlian dalam pengembangan software dan keamanan IT, kami menciptakan solusi inovatif yang tidak hanya memenuhi kebutuhan bisnis Anda, tetapi juga melampaui harapan Anda. </p>
 
                     </div>
                 </div>
@@ -128,33 +128,33 @@
 
 
                 <!-- TEXT BLOCK -->
-                <div class="col-md-5">
+                <div class="col-md-7">
                     <div class="txt-block left-column wow animate__animated animate__fadeInRight">
 
 
                         <!-- Section ID -->
-                        <span class="section-id">Our Customers</span>
+                        <span class="section-id">Klien Kami</span>
 
                         <!-- Title -->
-                        <h3>Join over 5,000 of the world's leading digital agencies</h3>
+                        <h3>Para klien yang menggunakan jasa kami</h3>
 
                     </div>
                 </div> <!-- END TEXT BLOCK -->
 
 
                 <!-- BRANDS-4 WRAPPER -->
-                <div class="col-md-7">
+                <div class="col-md-12 mt-4" style="margin-top: 100px !important">
                     <div class="brands-4-wrapper wow animate__animated animate__fadeInLeft">
                         <div class="row row-cols-3 row-cols-sm-3">
 
 
                             <!-- BRAND LOGO IMAGE -->
                             @foreach ($client_files as $key => $value)
-                            <div class="col">
-                                <div id="brand-4-1" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid"
+                            <div class="col col-lg-3 col-xl-2">
+                                <div id="brand-4-1" class="brand-logo text-center">
+                                    <a class="lt-img"><img class="img-fluid"
                                         src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid"
+                                    <a class="dt-img"><img class="img-fluid"
                                         src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
                                 </div>
                             </div>
