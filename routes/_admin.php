@@ -23,7 +23,7 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin-dashboard');
 
-        // POS
+        // BLOG
         Route::resource('pos/post', PostController::class);
         Route::post('/post', [PostController::class, 'store'])->name('store-post');
         Route::post('/get-sub-categories', [PostController::class, 'get_sub_categories'])->name('get-sub-categories');
@@ -32,10 +32,12 @@ Route::prefix('admin')
         Route::get('/pos/trash', [PostController::class, 'trash'])->name('post-trash');
         Route::get('/pos/restore/{id}', [PostController::class, 'restore_data'])->name('post-restore');
         Route::delete('/pos/force-delete/{id}', [PostController::class, 'force_delete'])->name('post-force-delete');
-        Route::resource('pos/category', CategoryController::class);
-        Route::resource('pos/tag', TagController::class);
 
-        // Statistik
+        // MASTER DATA 
+        Route::resource('/category', CategoryController::class);
+        Route::resource('/tag', TagController::class);
+
+        // PORTOFOLIO
         Route::resource('statistik', StatistikController::class, [
             'except' => ['show']
         ]);

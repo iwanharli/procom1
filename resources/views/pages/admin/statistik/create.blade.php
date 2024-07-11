@@ -13,13 +13,13 @@
                         <div class="col-auto mb-3">
                             <h1 class="page-header-title">
                                 <div class="page-header-icon"><i data-feather="file-text"></i></div>
-                                Tambah Statistik
+                                Tambah Portofolio
                             </h1>
                         </div>
                         <div class="col-12 col-xl-auto mb-3">
-                            <a class="btn btn-sm btn-light text-primary" href="{{ route('post.index') }}">
+                            <a class="btn btn-sm btn-light text-primary" href="{{ route('statistik.index') }}">
                                 <i class="me-1" data-feather="arrow-left"></i>
-                                Kembali Ke Semua Statistik
+                                Kembali Ke Semua Portofolio
                             </a>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                 <div class="row gx-4">
                     <div class="col-lg-8">
                         <div class="card mb-4">
-                            <div class="card-header">Form Statistik</div>
+                            <div class="card-header">Form Portofolio</div>
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label for="post_title">Judul</label>
@@ -63,7 +63,7 @@
 
                                 {{-- START --}}
 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="post_title">Jenis Grafik</label>
                                     <div class="chart-selector">
                                         <div class="row">
@@ -160,19 +160,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <select name="chart_type" class="form-control">
+                                    <select name="chart_type" class="form-control">
                                         <option value="bar" selected>Bar Chart</option>
                                         <option value="bar" selected>Line Chart</option>
-                                    </select> --}}
-                                </div>
+                                    </select>
+                                </div> --}}
 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="chart_description">Deskripsi Chart</label>
                                     <textarea name="chart_description" class="form-control"></textarea>
-                                </div>
+                                </div> --}}
 
-                                <div class="mb-3">
-                                    <label for="json_data">Input Data Statistik</label>
+                                <div class="mb-5 mt-5">
+                                    {{-- <label for="json_data">Input Data Portofolio</label> --}}
                                     <div class="mt-3 mb-3">
 
                                         <table class="table table-striped" id="data-container">
@@ -190,8 +190,8 @@
                                                             class="form-control" />
                                                     </td>
                                                     <td>
-                                                        <input type="number" name="data_value[]" step="any"
-                                                            value="" placeholder="0" class="form-control" />
+                                                        <input type="text" name="data_value[]" step="any"
+                                                            value="" class="form-control" />
                                                     </td>
                                                     <td style="display: flex; gap: 10px">
                                                         <button type="button" class="btn btn-outline-success"

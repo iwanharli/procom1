@@ -448,5 +448,5 @@
 
 
     {{-- MODAL  --}}
-    @include('pages.portal.components.modal')
+    {{-- @include('pages.portal.components.modal') --}}
 @endsection

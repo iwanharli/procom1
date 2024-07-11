@@ -9,18 +9,21 @@ use App\Models\App;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Photo;
+use App\Models\StatisticPost;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        if(Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Editor'){
+        if (Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Editor') {
             $draft = Post::where('post_status', 'Draft')->get()->count();
             $published = Post::where('post_status', 'Published')->get()->count();
             $user = User::count();
             $photo = Photo::count();
-        }else{
+
+            $porto = StatisticPost::where('post_status', 'Published')->get()->count();
+        } else {
             $draft = Post::where(['post_status' => 'Draft', 'users_id' => Auth::user()->id])->get()->count();
             $published = Post::where(['post_status' => 'Published', 'users_id' => Auth::user()->id])->get()->count();
             $user = User::count();
@@ -29,7 +32,9 @@ class DashboardController extends Controller
 
         $app = App::where('id', '1')->first();
 
-        return view('pages.admin.dashboard',[
+        return view('pages.admin.dashboard', [
+            'porto' => $porto,
+
             'draft' => $draft,
             'published' => $published,
             'user' => $user,

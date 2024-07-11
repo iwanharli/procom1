@@ -22,7 +22,7 @@ class CreateStatisticPostsTable extends Migration
             $table->text('post_content');
             $table->string('slug')->unique();
             $table->jsonb('json_data');
-            $table->string('chart_type')->default('bar');
+            $table->string('chart_type')->nullable();
             $table->string('post_status');
             $table->string('post_image');
             $table->text('post_image_description');

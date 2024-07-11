@@ -23,7 +23,6 @@
                     <nav class="mt-4 rounded" aria-label="breadcrumb">
                         <ol class="breadcrumb px-3 py-2 rounded mb-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin-dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item">Pos</li>
                             <li class="breadcrumb-item active">Kategori</li>
                         </ol>
                     </nav>

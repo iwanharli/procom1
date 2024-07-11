@@ -36,27 +36,18 @@ use App\Http\Controllers\RegisterController;
 
 
 Route::get('/foo', function () {
-	$targetFolder = base_path() . '/storage/app/public';
-	$linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
-	symlink($targetFolder, $linkFolder);
+    $targetFolder = base_path() . '/storage/app/public';
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetFolder, $linkFolder);
 });
 
 Route::get('/clear-cache', function () {
-	Artisan::call('route:cache');
+    Artisan::call('route:cache');
 });
 
 //Images
 Route::get('/images/{slug}', [HomeController::class, 'detail_images'])->name('images-detail');
-
-//Category
-Route::get('/category/{category:slug}', [HomeController::class, 'homeCategory'])->name('home-category');
 Route::get('/images', [HomeController::class, 'images'])->name('images');
-
-//Tag
-Route::get('/tag/{category:slug}', [HomeController::class, 'homeTag'])->name('home-tag');
-
-//Author
-Route::get('/author/{id}', [HomeController::class, 'author'])->name('author');
 
 //Search
 Route::get('/autocomplete', [HomeController::class, 'autocomplete'])->name('autocomplete');
@@ -78,7 +69,7 @@ Route::prefix('/')
     ->group(function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
         Route::get('/about', [AboutController::class, 'index'])->name('about');
-        
+
         Route::get('/blog', [BlogController::class, 'index'])->name('blog');
         Route::get('/blog/{date}/{slug}', [BlogController::class, 'blogDetail'])->name('blog.detail');
 
@@ -92,6 +83,12 @@ Route::prefix('/')
         Route::get('/careers/{code}', [CareersController::class, 'careerDetail'])->name('careers.detail');
 
         Route::get('/integration', [IntegrationController::class, 'index'])->name('integration');
+
+        //Master Data
+        Route::get('/category/{category:slug}', [HomeController::class, 'homeCategory'])->name('home-category');
+        Route::get('/tag/{category:slug}', [HomeController::class, 'homeTag'])->name('home-tag');
+        //Author
+        Route::get('/author/{id}', [HomeController::class, 'author'])->name('author');
     });
 
 

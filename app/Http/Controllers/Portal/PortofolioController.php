@@ -18,12 +18,12 @@ class PortofolioController extends Controller
         $portofolio = StatisticPost::with(['user'])->where([
             ['post_status', '=', 'Published'],
             ['created_at', '<', now()],
-        ])->latest()->paginate(9);
+        ])->latest()->paginate(6);
 
         // var_dump($statistik_all);
 
         return view('pages.portal.portofolio', [
-            'portofolio' => $portofolio,
+            'postData' => $portofolio,
         ]);
     }
 
