@@ -18,6 +18,9 @@
                 Messages
                 <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
             </a>
+
+
+
             <!-- Sidenav Menu Heading (Core)-->
             <div class="sidenav-menu-heading">Menu</div>
             <!-- Sidenav Link (Dashboard)-->
@@ -26,67 +29,95 @@
                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
                 Dashboard
             </a>
-            <!-- Sidenav Accordion (Posts)-->
+
+            {{-- BLOG --}}
             <a class="nav-link {{ request()->is('admin/pos*') ? 'active' : '' }}" href="javascript:void(0);"
-                data-bs-toggle="collapse" data-bs-target="#pos-menu" aria-expanded="false" aria-controls="pos-menu">
+                data-bs-toggle="collapse" data-bs-target="#blog-menu" aria-expanded="false" aria-controls="blog-menu">
                 <div class="nav-link-icon"><i data-feather="file-text"></i></div>
-                Post
+                Blog
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
-            <div class="collapse {{ request()->is('admin/pos*') ? 'show' : '' }}" id="pos-menu"
-                data-bs-parent="#pos-menu">
-                <nav class="sidenav-menu-nested nav" id="pos-menu">
+            <div class="collapse {{ request()->is('admin/pos*') ? 'show' : '' }}" id="blog-menu"
+                data-bs-parent="#blog-menu">
+                <nav class="sidenav-menu-nested nav" id="blog-menu">
                     <a class="nav-link {{ request()->is('admin/pos/post') || request()->is('admin/pos/post/*/edit') || request()->is('admin/pos/published') || request()->is('admin/pos/draft') || request()->is('admin/pos/trash') ? 'active' : '' }}"
-                        href="{{ route('post.index') }}" href="animations.html">Semua Post</a>
+                        href="{{ route('post.index') }}">Semua Post</a>
                     @if (Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Penulis')
                         <a class="nav-link {{ request()->is('admin/pos/post/create') ? 'active' : '' }}"
                             href="{{ route('post.create') }}">Tambah Baru</a>
                     @endif
-                    @if (Auth::user()->roles == 'Administrator')
-                        <a class="nav-link {{ request()->is('admin/pos/category*') ? 'active' : '' }}"
-                            href="{{ route('category.index') }}">Kategori</a>
-                        <a class="nav-link {{ request()->is('admin/pos/tag*') ? 'active' : '' }}"
-                            href="{{ route('tag.index') }}">Tag</a>
+                </nav>
+            </div>
+
+            {{-- PORTOFOLIO --}}
+            <a class="nav-link {{ request()->is('admin/statistik*') ? 'active' : '' }}" href="javascript:void(0);"
+                data-bs-toggle="collapse" data-bs-target="#portofolio-menu" aria-expanded="false"
+                aria-controls="portofolio-menu">
+                <div class="nav-link-icon"><i data-feather="briefcase"></i></div>
+                Portofolio
+                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse {{ request()->is('admin/statistik*') ? 'show' : '' }}" id="portofolio-menu"
+                data-bs-parent="#portofolio-menu">
+                <nav class="sidenav-menu-nested nav" id="portofolio-menu">
+                    <a class="nav-link {{ request()->is('admin/statistik') ? 'active' : '' }}"
+                        href="{{ route('statistik.index') }}">Semua Post</a>
+                    @if (Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Penulis')
+                        <a class="nav-link {{ request()->is('admin/statistik/create') ? 'active' : '' }}"
+                            href="{{ route('statistik.create') }}">Tambah Baru</a>
                     @endif
                 </nav>
             </div>
 
-            {{-- STATISTIKA --}}
-            <a class="nav-link {{ request()->is('admin/statistik*') ? 'active' : '' }}"
-                href="{{ route('statistik.index') }}">
-                <div class="nav-link-icon"><i data-feather="bar-chart"></i></div>
-                Statistik
-            </a>
+            {{-- MASTER DATA --}}
+            @if (Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Penulis')
+                <a class="nav-link {{ request()->is('admin/category*') || request()->is('admin/tag*') ? 'active' : '' }}"
+                    href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#masterData-menu"
+                    aria-expanded="false" aria-controls="masterData-menu">
+                    <div class="nav-link-icon"><i data-feather="database"></i></div>
+                    Master Data
+                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse {{ request()->is('admin/category*') || request()->is('admin/tag*') ? 'show' : '' }}" id="masterData-menu" data-bs-parent="#masterData-menu">
+                    <nav class="sidenav-menu-nested nav" id="masterData-menu">
+                        <a class="nav-link {{ request()->is('admin/category') ? 'active' : '' }}"
+                            href="{{ route('category.index') }}">Kategori</a>
+                        <a class="nav-link {{ request()->is('admin/tag') ? 'active' : '' }}"
+                            href="{{ route('tag.index') }}">Tag</a>
+                    </nav>
+                </div>
+            @endif
 
-            <!-- Sidenav Link (Foto)-->
-            <a class="nav-link {{ request()->is('admin/photo*') ? 'active' : '' }}"
-                href="{{ route('photo.index') }}">
-                <div class="nav-link-icon"><i data-feather="camera"></i></div>
-                Foto
-            </a>
-            <!-- Sidenav Link (Video)-->
-            {{-- <a class="nav-link {{ (request()->is('admin/video*')) ? 'active' : '' }}" href="{{ route('video.index') }}">
-                <div class="nav-link-icon"><i data-feather="film"></i></div>
-                Video
-            </a> --}}
+            {{-- APLIKASI --}}
             @if (Auth::user()->roles == 'Administrator')
-                <!-- Sidenav Link (Video)-->
-                <a class="nav-link {{ request()->is('admin/breaking-news*') ? 'active' : '' }}"
-                    href="{{ route('breaking-news') }}">
-                    <div class="nav-link-icon"><i data-feather="list"></i></div>
-                    Breaking News
+                <!-- Sidenav Link (Pengaturan)-->
+                <a class="nav-link {{ request()->is('admin/settings*') ? 'active' : '' }}" href="javascript:void(0);"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSettings" aria-expanded="false"
+                    aria-controls="collapseSettings">
+                    <div class="nav-link-icon"><i data-feather="package"></i></div>
+                    Aplikasi
+                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <!-- Sidenav Link (Video)-->
-                <a class="nav-link {{ request()->is('admin/headline*') ? 'active' : '' }}"
-                    href="{{ route('headline') }}">
-                    <div class="nav-link-icon"><i data-feather="list"></i></div>
-                    Headline
-                </a>
+                <div class="collapse {{ request()->is('admin/settings*') ? 'show' : '' }}" id="collapseSettings"
+                    data-bs-parent="#accordionSidenav">
+                    <nav class="sidenav-menu-nested nav">
+                        <a class="nav-link {{ request()->is('admin/settings/headline') ? 'active' : '' }}"
+                            href="{{ route('headline.index') }}">Headline</a>
+                        <a class="nav-link {{ request()->is('admin/settings/breaking-news') ? 'active' : '' }}"
+                            href="{{ route('breaking-news.index') }}">Breaking News</a>
+                        <a class="nav-link {{ request()->is('admin/settings/apps') ? 'active' : '' }}"
+                            href="{{ route('apps.index') }}">Aplikasi</a>
+                    </nav>
+                </div>
+            @endif
+
+            {{-- HALAMAN  --}}
+            @if (Auth::user()->roles == 'Administrator')
                 <a class="nav-link {{ request()->is('admin/page*') ? 'active' : '' }}" href="javascript:void(0);"
                     data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false"
                     aria-controls="collapsePages">
                     <div class="nav-link-icon"><i data-feather="file-text"></i></div>
-                    Pages
+                    Halaman
                     <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse {{ request()->is('admin/page*') ? 'show' : '' }}" id="collapsePages"
@@ -103,7 +134,8 @@
                     </nav>
                 </div>
             @endif
-            <!-- Sidenav Accordion (Pengguna)-->
+
+            {{-- PENGGUNA  --}}
             <a class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}" href="javascript:void(0);"
                 data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false"
                 aria-controls="collapseUtilities">
@@ -120,33 +152,11 @@
                         <a class="nav-link {{ request()->is('admin/users/user/create') ? 'active' : '' }}"
                             href="{{ route('user.create') }}">Tambah Baru</a>
                     @endif
-                    <a class="nav-link {{ request()->is('admin/users/user/profile') || request()->is('admin/users/user/profile/password') ? 'active' : '' }}"
-                        href="{{ route('profile-user') }}">Profil</a>
                 </nav>
             </div>
-            @if (Auth::user()->roles == 'Administrator')
-                <!-- Sidenav Link (Pengaturan)-->
-                <a class="nav-link {{ request()->is('admin/settings*') ? 'active' : '' }}"
-                    href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseSettings"
-                    aria-expanded="false" aria-controls="collapseSettings">
-                    <div class="nav-link-icon"><i data-feather="settings"></i></div>
-                    Pengaturan
-                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse {{ request()->is('admin/settings*') ? 'show' : '' }}" id="collapseSettings"
-                    data-bs-parent="#accordionSidenav">
-                    <nav class="sidenav-menu-nested nav">
-                        <a class="nav-link {{ request()->is('admin/settings/breaking-news') ? 'active' : '' }}"
-                            href="{{ route('breaking-news.index') }}">Breaking News</a>
-                        <a class="nav-link {{ request()->is('admin/settings/headline') ? 'active' : '' }}"
-                            href="{{ route('headline.index') }}">Headline</a>
-                        <a class="nav-link {{ request()->is('admin/settings/apps') ? 'active' : '' }}"
-                            href="{{ route('apps.index') }}">Aplikasi</a>
-                    </nav>
-                </div>
-            @endif
         </div>
     </div>
+
     <!-- Sidenav Footer-->
     <div class="sidenav-footer">
         <div class="sidenav-footer-content">

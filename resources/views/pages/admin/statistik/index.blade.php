@@ -13,9 +13,9 @@
                         <div class="col-auto mb-3">
                             <h1 class="page-header-title">
                                 <div class="page-header-icon"><i data-feather="user"></i></div>
-                                Statistik -
+                                Portofolio -
                                 @if (request()->is('admin/statistik'))
-                                    Semua Statistik
+                                    Semua Portofolio
                                 @elseif (request()->is('admin/statistik/published'))
                                     Published
                                 @elseif (request()->is('admin/statistik/draft'))
@@ -32,23 +32,23 @@
         <!-- Main page content-->
         <div class="container-xl px-4 mt-4">
             <!-- Account page navigation-->
-            <nav class="nav nav-borders">
+            {{-- <nav class="nav nav-borders">
                 <a class="nav-link {{ (request()->is('admin/statistik')) ? 'active ms-0' : '' }}" href="{{ route('statistik.index') }}">Semua ({{ $all }})</a>
                 <a class="nav-link {{ (request()->is('admin/statistik/published')) ? 'active ms-0' : '' }}" href="{{ route('post-published') }}">Published ({{ $published }})</a>
                 <a class="nav-link {{ (request()->is('admin/statistik/draft')) ? 'active ms-0' : '' }}" href="{{ route('post-draft') }}">Draft ({{ $draft }})</a>
                 @if (Auth::user()->roles == 'Administrator')
                     <a class="nav-link {{ (request()->is('admin/statistik/trash')) ? 'active ms-0' : '' }}" href="{{ route('post-trash') }}">Sampah ({{ $trash }})</a>
                 @endif
-            </nav>
-            <hr class="mt-0 mb-4" />
+            </nav> --}}
+            {{-- <hr class="mt-0 mb-4" /> --}}
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card card-header-actions mb-4">
                         <div class="card-header">
-                            List Statistik
+                            List Portofolio
                             @if (Auth::user()->roles == 'Administrator' || Auth::user()->roles == 'Penulis')
                             <a class="btn btn-sm btn-primary" href="{{ route('statistik.create') }}">
-                                Tambah Statistik Baru
+                                Tambah Portofolio Baru
                             </a>
                             @endif
                         </div>

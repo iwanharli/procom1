@@ -50,12 +50,12 @@
             @if (Auth::user()->roles == 'Administrator')
             <div class="row">
                 <div class="col-lg-6 col-xl-4 mb-4">
-                    <div class="card bg-primary text-white h-100">
+                    <div class="card bg-warning text-white h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="me-3">
-                                    <div class="text-white-75 small">Pos (Draft)</div>
-                                    <div class="text-lg fw-bold">{{ $draft }}</div>
+                                    <div class="text-white-75 small">Blog (Published)</div>
+                                    <div class="text-lg fw-bold">{{ $published }}</div>
                                 </div>
                                 <i class="feather-xl text-white-50" data-feather="file-text"></i>
                             </div>
@@ -67,12 +67,12 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-4 mb-4">
-                    <div class="card bg-warning text-white h-100">
+                    <div class="card bg-primary text-white h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="me-3">
-                                    <div class="text-white-75 small">Pos (Published)</div>
-                                    <div class="text-lg fw-bold">{{ $published }}</div>
+                                    <div class="text-white-75 small">Portofolio (Published)</div>
+                                    <div class="text-lg fw-bold">{{ $porto }}</div>
                                 </div>
                                 <i class="feather-xl text-white-50" data-feather="file-text"></i>
                             </div>
