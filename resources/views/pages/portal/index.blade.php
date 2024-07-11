@@ -279,8 +279,8 @@
                             <a href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
                                 <div class="blog-post-img r-12">
                                     <div class="hover-overlay">
-                                        <img class="img-fluid" src="{{ Storage::url($item->post->post_image) }}" style="max-width: 110% !important;"
-                                            alt="blog-post-image">
+                                        <img class="img-fluid" src="{{ Storage::url($item->post->post_image) }}"
+                                            style="max-width: 110% !important;" alt="blog-post-image">
                                         <div class="item-overlay"></div>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
                     <div class="brands-title mt-3">
-                        <h6 class="h6-lg">Trusted by companies, big or not-so-big:</h6>
+                        <h6 class="h6-lg">Trusted by companies:</h6>
                     </div>
                 </div>
             </div>
@@ -355,77 +355,15 @@
                 <div class="col text-center">
                     <div class="owl-carousel brands-carousel-5">
 
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-1.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-1w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-2.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-2w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-3.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-3w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-4.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-4w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-5.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-5w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-6.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-6w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-7.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-7w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-8.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-8w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-9.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-9w.png') }}" alt="brand-logo"></a>
-                        </div>
+                            <!-- BRAND LOGO IMAGE -->
+                        @foreach ($client_files as $key => $value)
+                            <div class="brand-logo">
+                                <a href="#" class="lt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                                <a href="#" class="dt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                            </div>
+                        @endforeach
 
                     </div>
                 </div>
@@ -482,8 +420,7 @@
                                     {{-- {{ $width }} {{ $height }} --}}
 
                                     <img class="img-fluid" src="{{ Storage::url($item->post_image) }}"
-                                        style="height: {{ $height }}px !important;"
-                                        alt="project-preview">
+                                        style="height: {{ $height }}px !important;" alt="project-preview">
                                     <div class="item-overlay"></div>
 
                                     <!-- Project Category -->
@@ -742,5 +679,5 @@
 
 
     {{-- MODAL  --}}
-    @include('pages.portal.components.modal')
+    {{-- @include('pages.portal.components.modal') --}}
 @endsection

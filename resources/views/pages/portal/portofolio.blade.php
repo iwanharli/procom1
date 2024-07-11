@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- PORTFOLIO #1
-       ============================================= -->
+               ============================================= -->
     <section id="portfolio-1" class="bg--snow pb-70 inner-page-hero portfolio-section division">
         <div class="container">
 
@@ -49,7 +49,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-01.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-01.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -80,7 +81,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -94,7 +96,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-02.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-02.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -125,7 +128,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -139,7 +143,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-03.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-03.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -170,7 +175,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -184,7 +190,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-04.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-04.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -215,7 +222,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -229,7 +237,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-05.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-05.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -260,7 +269,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -274,7 +284,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-06.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-06.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -305,7 +316,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -319,7 +331,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-07.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-07.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -350,7 +363,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -364,7 +378,8 @@
                             <div class="hover-overlay r-12">
 
                                 <!-- Image -->
-                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-08.jpg') }}" alt="project-preview">
+                                <img class="img-fluid" src="{{ asset('assets/_portal/images/projects/img-08.jpg') }}"
+                                    alt="project-preview">
                                 <div class="item-overlay"></div>
 
                                 <!-- Project Category -->
@@ -395,7 +410,8 @@
 
                                     <!-- Project Link -->
                                     <div class="project-source ico-25">
-                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span class="flaticon-right-arrow"></span></a>
+                                        <a href="{{ route('portofolio.detail', ['slug' => '1']) }}"><span
+                                                class="flaticon-right-arrow"></span></a>
                                     </div>
 
                                 </div>
@@ -416,7 +432,7 @@
 
 
     <!-- PAGE PAGINATION
-       ============================================= -->
+               ============================================= -->
     <div class="bg--snow pb-100 page-pagination theme-pagination">
         <div class="container">
             <div class="row">
@@ -449,7 +465,7 @@
 
 
     <!-- BRANDS-4
-       ============================================= -->
+               ============================================= -->
     <div id="brands-4" class="bg--snow py-100 brands-section">
         <div class="container">
             <div class="row">
@@ -475,104 +491,19 @@
                     <div class="brands-4-wrapper wow animate__animated animate__fadeInLeft">
                         <div class="row row-cols-3 row-cols-sm-3">
 
-
                             <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-1" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-1.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-1w.png') }}"
-                                            alt="brand-logo"></a>
+                            @foreach ($client_files as $key => $value)
+                                <div class="col">
+                                    <div id="brand-4-1" class="brand-logo">
+                                        <a href="#" class="lt-img"><img class="img-fluid"
+                                                src="{{ Storage::url('assets/clients/' . $value) }}"
+                                                alt="brand-logo"></a>
+                                        <a href="#" class="dt-img"><img class="img-fluid"
+                                                src="{{ Storage::url('assets/clients/' . $value) }}"
+                                                alt="brand-logo"></a>
+                                    </div>
                                 </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-2" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-2.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-2w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-3" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-3.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-3w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-4" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-4.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-4w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-5" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-5.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-5w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-6" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-6.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-6w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-7" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-7.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-7w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-8" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-8.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-8w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
-
-
-                            <!-- BRAND LOGO IMAGE -->
-                            <div class="col">
-                                <div id="brand-4-9" class="brand-logo">
-                                    <a href="#" class="lt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-9.png') }}"
-                                            alt="brand-logo"></a>
-                                    <a href="#" class="dt-img"><img class="img-fluid" src="{{ asset('assets/_portal/images/brand-9w.png') }}"
-                                            alt="brand-logo"></a>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>

@@ -13,14 +13,14 @@
                         <div class="banner-1-txt">
 
                             <!-- Title -->
-                            <h4 class="h4-md">Join 25K+ businesses <br> already growing with SolTech</h4>
+                            <h4 class="h4-md">Hubungi Kami</h4>
 
                             <!-- Text -->
-                            <p class="p-md">Start your free 14-day trial. No credit card required.</p>
+                            <p class="p-md">Hubungi Kami untuk Informasi Lebih Lanjut tentang Layanan Pengembangan Software dan Keamanan IT.</p>
 
                             <!-- Button -->
-                            <a href="#" class="btn btn-sm r-06 btn--theme hover--theme" data-bs-toggle="modal"
-                                data-bs-target="#modal-2">Get Started
+                            <a href="mailto:contact@intishineutama.com" class="btn btn-sm r-06 btn--theme hover--theme" data-bs-toggle="modal"
+                                data-bs-target="#modal-2">EMAIL : contact@intishineutama.com
                             </a>
 
                         </div>

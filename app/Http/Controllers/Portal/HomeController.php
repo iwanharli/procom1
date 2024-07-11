@@ -38,10 +38,19 @@ class HomeController extends Controller
             ['published_at', '<', now()],
         ])->latest()->take(3)->get();
 
+        $client_files = [
+            "bri.png", "cimb.png", "densus.png", "depkominfo.png", "fiduciary.png",
+            "infocon.png", "intel.png", "jokowibasuki.png", "jokowijk.png",
+            "kominfo.png", "mandiri.png", "mega.png", "pengayoman.png",
+            "prabowogibran.png", "scan.py", "sgu.png", "sthana.png",
+            "stsn.png", "tutwuri.png", "waskita.png", "yudisial.png"
+        ];
+
         return view('pages.portal.index', [
             'headlines' => $headlines,
             'portofolio' => $portofolio,
-            'blogFooter' => $blogFooter
+            'blogFooter' => $blogFooter,
+            'client_files' => $client_files
         ]);
     }
 }

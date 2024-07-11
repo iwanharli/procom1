@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- ABOUT-1
-                           ============================================= -->
+                                   ============================================= -->
     <section id="about-1" class="gr--snow inner-page-hero about-section division">
 
 
@@ -15,12 +15,10 @@
                     <div class="about-1-title">
 
                         <!-- Title -->
-                        <h2 class="h2-title">We provide solutions for your creative ideas</h2>
+                        <h2 class="h2-title">{{ $about_h1 }}</h2>
 
                         <!-- Text -->
-                        <p class="p-lg">Blandit nullam tempor sapien and gravida donec pretium ipsum a porta justo
-                            integer ociis purus velna vitae auctor integer undo congue ipsum purus pretium ligula ipsum
-                            a tempor primis libero at tempus, blandit and cursus varius magnis egestas
+                        <p class="p-lg">{!! $about_p1 !!}
                         </p>
 
                     </div>
@@ -47,7 +45,7 @@
 
 
     <!-- ABOUT-2
-                           ============================================= -->
+                                   ============================================= -->
     <section id="about-2" class="pt-100 about-section division">
         <div class="container">
             <div class="row">
@@ -61,7 +59,7 @@
                         <span class="section-id">Why Choose Us</span>
 
                         <!-- Title -->
-                        <h2>We craft marketing and digital products that grow business</h2>
+                        <h2>{{ $about_h2 }}</h2>
 
                     </div>
                 </div>
@@ -72,20 +70,7 @@
                     <div class="about-2-txt wow animate__animated animate__fadeInLeft">
 
                         <!-- Text -->
-                        <p>Sodales tempor sapien quaerat ipsum congue undo laoreet turpis neque auctor turpis vitae a
-                            diam luctus magna neque
-                        </p>
-
-                        <!-- Text -->
-                        <p>Tempor sapien sodales quaerat ipsum congue undo laoreet turpis neque auctor turpis vitae dolor
-                            luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit auris diam dapibus
-                            libero at fusce blandit neque sagittis
-                        </p>
-
-                        <!-- Text -->
-                        <p class="mb-0">Sodales sapien tempor quaerat ipsum congue undo laoreet turpis neque auctor turpis
-                            vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit auris
-                        </p>
+                        <p>{!! $about_p2 !!} </p>
 
                     </div>
                 </div> <!-- END ABOUT TEXT -->
@@ -99,7 +84,7 @@
 
 
     <!-- BRANDS-1
-                           ============================================= -->
+                                   ============================================= -->
     <div id="brands-1" class="py-100 brands-section">
         <div class="container">
 
@@ -120,76 +105,16 @@
                     <div class="owl-carousel brands-carousel-5">
 
                         <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-1.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-1w.png') }}" alt="brand-logo"></a>
-                        </div>
 
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-2.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-2w.png') }}" alt="brand-logo"></a>
-                        </div>
+                        @foreach ($client_files as $key => $value)
+                            <div class="brand-logo">
+                                <a href="#" class="lt-img"><img class="img-fluid"
+                                    src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                                <a href="#" class="dt-img"><img class="img-fluid"
+                                    src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                            </div>
+                        @endforeach
 
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-3.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-3w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-4.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-4w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-5.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-5w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-6.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-6w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-7.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-7w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-8.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-8w.png') }}" alt="brand-logo"></a>
-                        </div>
-
-                        <!-- BRAND LOGO IMAGE -->
-                        <div class="brand-logo">
-                            <a href="#" class="lt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-9.png') }}" alt="brand-logo"></a>
-                            <a href="#" class="dt-img"><img class="img-fluid"
-                                    src="{{ asset('assets/_portal/images/brand-9w.png') }}" alt="brand-logo"></a>
-                        </div>
 
                     </div>
                 </div>
@@ -206,8 +131,8 @@
     <hr class="divider">
 
     <!-- TEAM-1
-                       ============================================= -->
-    <section id="team-1" class="py-100 team-section division">
+                               ============================================= -->
+    <section id="team-1" class="py-100 team-section division d-none">
         <div class="container">
 
 
@@ -433,7 +358,9 @@
 
 
         </div> <!-- End container -->
-    </section> <!-- END TEAM-1 -->
+    </section>
+
+    <!-- END TEAM-1 -->
 
     <!-- DIVIDER LINE -->
     <hr class="divider mb-5">
@@ -448,5 +375,5 @@
 
 
     {{-- MODAL  --}}
-    @include('pages.portal.components.modal')
+    {{-- @include('pages.portal.components.modal') --}}
 @endsection

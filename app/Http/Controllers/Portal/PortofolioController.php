@@ -15,6 +15,15 @@ class PortofolioController extends Controller
 {
     public function index()
     {
+
+        $client_files = [
+            "bri.png", "cimb.png", "densus.png", "depkominfo.png", "fiduciary.png",
+            "infocon.png", "intel.png", "jokowibasuki.png", "jokowijk.png",
+            "kominfo.png", "mandiri.png", "mega.png", "pengayoman.png",
+            "prabowogibran.png", "scan.py", "sgu.png", "sthana.png",
+            "stsn.png", "tutwuri.png", "waskita.png", "yudisial.png"
+        ];
+
         $portofolio = StatisticPost::with(['user'])->where([
             ['post_status', '=', 'Published'],
             ['created_at', '<', now()],
@@ -24,6 +33,7 @@ class PortofolioController extends Controller
 
         return view('pages.portal.portofolio', [
             'portofolio' => $portofolio,
+            'client_files' => $client_files
         ]);
     }
 
