@@ -93,7 +93,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
                     <div class="brands-title">
-                        <h6 class="h6-md">Trusted by companies, big or not-so-big:</h6>
+                        <h6 class="h6-md">Trusted by companies:</h6>
                     </div>
                 </div>
             </div>
