@@ -21,7 +21,7 @@
                         </p>
 
                         <!-- Button -->
-                        <a href="#features-10" class="btn btn-md r-06 btn--theme hover--tra-black">Contact Us</a>
+                        <a href="{{ route('about') }}" class="btn btn-md r-06 btn--theme hover--tra-black">Contact Us</a>
 
                     </div>
                 </div> <!-- END HERO TEXT -->

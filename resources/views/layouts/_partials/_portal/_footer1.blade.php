@@ -44,6 +44,14 @@
 
                     <!-- Links -->
                     <ul class="foo-links clearfix">
+                        @php
+                            $blogFooter = App\Models\Post::with(['user', 'category'])
+                                ->where([['post_status', '=', 'Published'], ['published_at', '<', now()]])
+                                ->latest()
+                                ->take(3)
+                                ->get();
+                        @endphp
+
                         @if ($blogFooter ?? false)
                             @foreach ($blogFooter as $item)
                                 <li>
@@ -78,12 +86,12 @@
 
                     <!-- Links -->
                     <ul class="foo-links clearfix">
-                        <li>
+                        {{-- <li>
                             <p><a href="terms.html">Terms of Use</a></p>
                         </li>
                         <li>
                             <p><a href="privacy.html">Privacy Policy</a></p>
-                        </li>
+                        </li> --}}
                         <li>
                             <p><a href="cookies.html">Cookie Policy</a></p>
                         </li>
@@ -175,12 +183,12 @@
 
                 <!-- FOOTER SOCIALS -->
                 <div class="col">
-                    <ul class="bottom-footer-socials ico-20 text-end">
+                    {{-- <ul class="bottom-footer-socials ico-20 text-end">
                         <li><a href="#"><span class="flaticon-facebook"></span></a></li>
                         <li><a href="#"><span class="flaticon-twitter-1"></span></a></li>
                         <li><a href="#"><span class="flaticon-linkedin-logo"></span></a></li>
                         <li><a href="#"><span class="flaticon-instagram"></span></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
 
 

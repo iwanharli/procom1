@@ -15,7 +15,7 @@
                     <div class="section-title mb-80">
 
                         <!-- Title -->
-                        <h2 class="h2-xl">Solusi Lengkap untuk Kebutuhan Anda</h2>
+                        <h2 class="h2-xl">Your Best Solutions for Software and Security</h2>
 
                         <!-- Text -->
                         <p class="p-xl">Kami menawarkan solusi menyeluruh yang dirancang untuk meningkatkan efisiensi dan
@@ -105,7 +105,7 @@
                                 <span class="section-id">Strategies That Work</span>
 
                                 <!-- Title -->
-                                <h2>Solusi Digital Efektif</h2>
+                                <h2>Effective Digital Solutions</h2>
 
                                 <!-- Text -->
                                 <p>Kami menyediakan solusi "all-in-one" yang komprehensif untuk memenuhi berbagai kebutuhan
@@ -144,7 +144,7 @@
                     <div class="section-title mb-70">
 
                         <!-- Title -->
-                        <h2 class="h2-xl">Beragam Teknologi untuk Beragam Kebutuhan</h2>
+                        <h2 class="h2-xl">Diverse Technologies for Diverse Needs</h2>
 
                         <!-- Text -->
                         <p class="p-xl">Kami siap menyediakan solusi yang sesuai dengan tantangan teknologi Anda. Kami

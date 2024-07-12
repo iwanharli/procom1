@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- FAQs-3
-                                   ============================================= -->
+                                       ============================================= -->
     <section id="faqs-3" class="gr--snow pb-100 inner-page-hero faqs-section division">
         <div class="container">
 
@@ -87,7 +87,7 @@
                     <!-- MORE QUESTIONS LINK -->
                     <div class="more-questions">
                         <div class="more-questions-txt bg--whitesmoke r-100">
-                            <p class="p-lg">Have any questions? <a href="contacts.html" class="color--theme">Get in
+                            <p class="p-lg">Have any questions? <a href="{{ route('about') }}" class="color--theme">Get in
                                     Touch</a></p>
                         </div>
                     </div>

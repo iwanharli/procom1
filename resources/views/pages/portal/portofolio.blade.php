@@ -15,10 +15,10 @@
                     <div class="section-title mb-40">
 
                         <!-- Title -->
-                        <h2 class="h2-title">Solusi Terbaik Software dan Keamanan Anda</h2>
+                        <h2 class="h2-title">Innovative Software and Advance Security Solutions</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">kami berdedikasi untuk mewujudkan impian teknologi Anda menjadi kenyataan. Dengan keahlian dalam pengembangan software dan keamanan IT, kami menciptakan solusi inovatif yang tidak hanya memenuhi kebutuhan bisnis Anda, tetapi juga melampaui harapan Anda. </p>
+                        <p class="p-xl">Kami berkomitmen untuk mengubah impian teknologi Anda menjadi kenyataan. Dengan keahlian dalam pengembangan perangkat lunak dan keamanan TI, kami menciptakan solusi inovatif yang tidak hanya sesuai dengan kebutuhan bisnis Anda, tetapi juga memberikan solusi yang praktis dan efektif. </p>
 
                     </div>
                 </div>
@@ -41,7 +41,7 @@
             <!-- FILTERING CONTENT -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="filter-content">
+                    <div class="filter-content row">
 
 
                         <!-- PROJECT #1 -->
@@ -52,7 +52,7 @@
                                 $height = $currentSize[1];
                                 $counter++;
                             @endphp --}}
-                            <div class="filter-item illustration">
+                            <div class="filter-item illustration col-12 col-md-6 col-lg-4">
                                 <div class="hover-overlay r-12">
 
                                     <!-- Image -->
@@ -128,15 +128,16 @@
 
 
                 <!-- TEXT BLOCK -->
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div class="txt-block left-column wow animate__animated animate__fadeInRight">
 
 
                         <!-- Section ID -->
-                        <span class="section-id">Klien Kami</span>
+                        {{-- <span class="section-id">Klien Kami</span> --}}
 
                         <!-- Title -->
-                        <h3>Para klien yang menggunakan jasa kami</h3>
+                        <h3>Our Clients</h3>
+                        <p>Klien-klien kami adalah inti dari segala yang kami lakukan. Kami mengutamakan memahami kebutuhan dan tujuan unik mereka untuk memberikan solusi yang disesuaikan yang mendorong kesuksesan mereka. </p>
 
                     </div>
                 </div> <!-- END TEXT BLOCK -->

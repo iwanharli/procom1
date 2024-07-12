@@ -86,7 +86,7 @@ class StatistikService
             if ($request->file('post_image')) {
 
                 $image = $request->file('post_image');
-                $path = $image->hashName('assets/statistik-images');
+                $path = $image->hashName('public/assets/statistik-images');
 
                 $image_resize = Image::make($image->getRealPath());
                 $image_resize->resize(1200, 675);
@@ -167,7 +167,7 @@ class StatistikService
             if ($request->file('post_image')) {
                 Storage::delete($item->post_image);
                 $image = $request->file('post_image');
-                $path = $image->hashName('assets/statistik-images');
+                $path = $image->hashName('public/assets/statistik-images');
 
                 $image_resize = Image::make($image->getRealPath());
                 $image_resize->resize(1200, 675);
