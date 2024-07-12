@@ -30,7 +30,7 @@
                 <!-- HERO IMAGE -->
                 <div class="col-md-6">
                     <div class="hero-1-img wow animate__animated animate__fadeInLeft">
-                        <img class="img-fluid" src="{{ asset('assets/_portal/images/hero-1-img.svg') }}" alt="hero-image">
+                        <img class="img-fluid" src="{{  asset('assets/imgs/dev.png') }}" alt="hero-image">
                     </div>
                 </div>
 
@@ -103,9 +103,9 @@
 
                             <!-- IMAGE -->
                             <div class="fbox-10-img text-center">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/_portal/images/analytics.svg') }}"
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/analysis.png') }}"
                                     alt="feature-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/_portal/images/analytics-dark.svg') }}"
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/analysis.png') }}"
                                     alt="feature-image">
                             </div>
 
@@ -128,7 +128,7 @@
                                 </div>
 
                                 <!-- Title -->
-                                <h5 class="h5-lg">Marketing Integrations</h5>
+                                <h5 class="h5-lg">Campaign Integrations</h5>
 
                                 <!-- Text -->
                                 <ul class="simple-list">
@@ -150,10 +150,10 @@
 
                             <!-- IMAGE -->
                             <div class="fbox-10-img text-center">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/_portal/images/integrations.svg') }}"
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/socmed.png') }}"
                                     alt="feature-image">
                                 <img class="img-fluid dt-img"
-                                    src="{{ asset('assets/_portal/images/integrations-dark.svg') }}" alt="feature-image">
+                                    src="{{ asset('assets/imgs/socmed.png') }}" alt="feature-image">
                             </div>
 
 
@@ -190,18 +190,18 @@
                                 </div>
 
                                 <!-- Title -->
-                                <h5 class="h5-xl">Solutions that will make your business successful</h5>
+                                <h5 class="h5-xl">IT Solutions that will make your business successful</h5>
 
                                 <!-- Text -->
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda.
+                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda di bidang IT Security dan Software Development.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Tingkatkan kinerja dan efisiensi dengan pendekatan inovatif kami.
+                                        <p class="mb-0">Optimalkan keamanan sistem dan pengembangan perangkat lunak Anda dengan solusi yang canggih dan terpercaya.
                                         </p>
                                     </li>
 
@@ -221,9 +221,9 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6 col-lg-7">
                             <div class="bc-2-img right-column wow animate__animated animate__fadeInLeft">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/_portal/images/progress.svg') }}"
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}"
                                     alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/_portal/images/progress-dark.svg') }}"
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}"
                                     alt="content-image">
                             </div>
                         </div>

@@ -52,7 +52,7 @@
                                 $height = $currentSize[1];
                                 $counter++;
                             @endphp --}}
-                            <div class="filter-item illustration col-12 col-md-6 col-lg-4">
+                            <div class="filter-item illustration">
                                 <div class="hover-overlay r-12">
 
                                     <!-- Image -->
