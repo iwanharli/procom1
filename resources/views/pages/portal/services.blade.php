@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- FEATURES-2
-                                ============================================= -->
+                                    ============================================= -->
     <section id="features-2" class="py-100 mt-50 features-section division">
         <div class="container">
 
@@ -78,7 +78,7 @@
     <!-- END FEATURES-2 -->
 
     <!-- BOX CONTENT
-                                ============================================= -->
+                                    ============================================= -->
     <section class="bc-01 ws-wrapper content-section">
         <div class="container">
             <div class="bc-01-wrapper bg--02 bg--fixed r-16">
@@ -89,10 +89,8 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6">
                             <div class="img-block left-column wow animate__animated animate__fadeInRight">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/_portal/images/img-05.svg') }}"
-                                    alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/_portal/images/img-05d.svg') }}"
-                                    alt="content-image">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/tech.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/tech.png') }}" alt="content-image">
                             </div>
                         </div>
 
@@ -133,7 +131,7 @@
     <!-- END BOX CONTENT -->
 
     <!-- INTEGRATIONS-4
-                            ============================================= -->
+                                ============================================= -->
     <section id="integrations-4" class="pt-100 pb-100 integrations-section division">
         <div class="container">
 
@@ -166,9 +164,8 @@
                         <div class="col">
                             <a href="#">
                                 <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                    <img class="img-fluid" src="{{ Storage::url('assets/stack/'.$value) }}"
-                                        alt="tool-logo">
-                                    <h6>{{ ucwords(str_replace(".png", "", $value)) }}</h6>
+                                    <img class="img-fluid" src="{{ Storage::url('assets/stack/' . $value) }}" alt="tool-logo">
+                                    <h6>{{ ucwords(str_replace('.png', '', $value)) }}</h6>
                                 </div>
                             </a>
                         </div>

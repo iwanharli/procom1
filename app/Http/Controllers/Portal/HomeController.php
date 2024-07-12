@@ -29,7 +29,7 @@ class HomeController extends Controller
         $portofolio = StatisticPost::with(['user'])->where([
             ['post_status', '=', 'Published'],
             ['created_at', '<', now()],
-        ])->latest()->take(4)->get();
+        ])->inRandomOrder()->take(4)->get();
 
         $headlines = Headline::with(['post'])->latest()->get();
 
