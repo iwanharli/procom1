@@ -397,7 +397,7 @@
                     <div class="filter-content">
 
                         @php
-                            $sizes = ['468x448', '468x392', '468x392', '468x336'];
+                            $sizes = ['800x400', '800x400', '800x400', '800x400'];
                             $counter = 0;
                         @endphp
 
