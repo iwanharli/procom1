@@ -397,7 +397,7 @@
                     <div class="filter-content">
 
                         @php
-                            $sizes = ['800x400', '800x400', '800x400', '800x400'];
+                            // $sizes = ['468x392', '468x392', '468x392', '468x392'];
                             $counter = 0;
                         @endphp
 
@@ -405,9 +405,9 @@
                         <!-- PROJECT #1 -->
                         @foreach ($portofolio as $item)
                             @php
-                                $currentSize = explode('x', $sizes[$counter % count($sizes)]);
-                                $width = $currentSize[0];
-                                $height = $currentSize[1];
+                                // $currentSize = explode('x', $sizes[$counter % count($sizes)]);
+                                // $width = $currentSize[0];
+                                // $height = $currentSize[1];
                                 $counter++;
                             @endphp
 
@@ -417,7 +417,7 @@
                                     {{-- {{ $width }} {{ $height }} --}}
 
                                     <img class="img-fluid" src="{{ Storage::url($item->post_image) }}"
-                                        style="height: {{ $height }}px !important;" alt="project-preview">
+                                        style="height: auto !important; width: 100%" alt="project-preview">
                                     <div class="item-overlay"></div>
 
                                     <!-- Project Category -->
