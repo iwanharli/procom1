@@ -30,7 +30,7 @@
                 <!-- HERO IMAGE -->
                 <div class="col-md-6">
                     <div class="hero-1-img wow animate__animated animate__fadeInLeft">
-                        <img class="img-fluid" src="{{  asset('assets/imgs/dev.png') }}" alt="hero-image">
+                        <img class="img-fluid" src="{{ asset('assets/imgs/dev.png') }}" alt="hero-image">
                     </div>
                 </div>
 
@@ -54,7 +54,8 @@
                         <h2 class="h2-xl">Handling your marketing needs in a better way</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Tingkatkan efektivitas pemasaran Anda dengan pendekatan kami yang lebih cerdas dan efisien.</p>
+                        <p class="p-xl">Tingkatkan efektivitas pemasaran Anda dengan pendekatan kami yang lebih cerdas dan
+                            efisien.</p>
 
                     </div>
                 </div>
@@ -87,12 +88,14 @@
 
                                     <li class="list-item">
                                         <p>
-                                            Ubah data menjadi wawasan berharga untuk keputusan yang lebih cerdas dan strategis.
+                                            Ubah data menjadi wawasan berharga untuk keputusan yang lebih cerdas dan
+                                            strategis.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Maksimalkan efisiensi dan keuntungan bisnis Anda dengan solusi BI kami yang canggih.
+                                        <p class="mb-0">Maksimalkan efisiensi dan keuntungan bisnis Anda dengan solusi BI
+                                            kami yang canggih.
                                         </p>
                                     </li>
 
@@ -139,7 +142,8 @@
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Tingkatkan hasil pemasaran Anda dengan integrasi yang mulus dan strategi yang terkoordinasi.
+                                        <p class="mb-0">Tingkatkan hasil pemasaran Anda dengan integrasi yang mulus dan
+                                            strategi yang terkoordinasi.
                                         </p>
                                     </li>
 
@@ -152,8 +156,8 @@
                             <div class="fbox-10-img text-center">
                                 <img class="img-fluid lt-img" src="{{ asset('assets/imgs/socmed.png') }}"
                                     alt="feature-image">
-                                <img class="img-fluid dt-img"
-                                    src="{{ asset('assets/imgs/socmed.png') }}" alt="feature-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/socmed.png') }}"
+                                    alt="feature-image">
                             </div>
 
 
@@ -196,12 +200,14 @@
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda di bidang IT Security dan Software Development.
+                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda di bidang
+                                            IT Security dan Software Development.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Optimalkan keamanan sistem dan pengembangan perangkat lunak Anda dengan solusi yang canggih dan terpercaya.
+                                        <p class="mb-0">Optimalkan keamanan sistem dan pengembangan perangkat lunak Anda
+                                            dengan solusi yang canggih dan terpercaya.
                                         </p>
                                     </li>
 
@@ -221,10 +227,8 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6 col-lg-7">
                             <div class="bc-2-img right-column wow animate__animated animate__fadeInLeft">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}"
-                                    alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}"
-                                    alt="content-image">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
                             </div>
                         </div>
 
@@ -258,6 +262,11 @@
                 <!-- BLOG POST -->
                 @foreach ($headlines as $index => $item)
                     <?php
+
+                    if (empty($item->post)) {
+                        continue;
+                    }
+
                     $date = date('Y-m-d', strtotime($item->post->published_at));
                     ?>
                     <div class="col">
@@ -343,13 +352,13 @@
                 <div class="col text-center">
                     <div class="owl-carousel brands-carousel-5">
 
-                            <!-- BRAND LOGO IMAGE -->
+                        <!-- BRAND LOGO IMAGE -->
                         @foreach ($client_files as $key => $value)
                             <div class="brand-logo">
                                 <a href="#" class="lt-img"><img class="img-fluid"
-                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
                                 <a href="#" class="dt-img"><img class="img-fluid"
-                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
                             </div>
                         @endforeach
 
@@ -486,19 +495,22 @@
                         <h2>Why do people choose Us?</h2>
 
                         <!-- Text -->
-                        <p>Kami dipilih karena komitmen kami dalam memberikan solusi yang tepat dan terpercaya untuk setiap kebutuhan bisnis Anda.
+                        <p>Kami dipilih karena komitmen kami dalam memberikan solusi yang tepat dan terpercaya untuk setiap
+                            kebutuhan bisnis Anda.
                         </p>
 
                         <!-- List -->
                         <ul class="simple-list">
 
                             <li class="list-item">
-                                <p>Kami berkomitmen untuk memberikan layanan terbaik dengan fokus pada kepuasan pelanggan dan inovasi yang berkelanjutan.
+                                <p>Kami berkomitmen untuk memberikan layanan terbaik dengan fokus pada kepuasan pelanggan
+                                    dan inovasi yang berkelanjutan.
                                 </p>
                             </li>
 
                             <li class="list-item">
-                                <p class="mb-0">Dengan pengalaman dan keahlian yang mendalam, kami siap membantu Anda mencapai tujuan bisnis Anda dengan lebih baik.
+                                <p class="mb-0">Dengan pengalaman dan keahlian yang mendalam, kami siap membantu Anda
+                                    mencapai tujuan bisnis Anda dengan lebih baik.
                                 </p>
                             </li>
 
@@ -570,7 +582,8 @@
                                     <h6 class="h6-lg">Experience</h6>
 
                                     <!-- Text -->
-                                    <p>Manfaatkan keahlian kami dalam menyediakan solusi yang terbukti untuk mengoptimalkan operasi bisnis Anda.</p>
+                                    <p>Manfaatkan keahlian kami dalam menyediakan solusi yang terbukti untuk mengoptimalkan
+                                        operasi bisnis Anda.</p>
 
                                 </div>
 
@@ -606,7 +619,8 @@
                                     <h6 class="h6-lg">Quality</h6>
 
                                     <!-- Text -->
-                                    <p>Hadirkan produk dan layanan unggulan dengan standar tertinggi untuk kepuasan pelanggan yang optimal.</p>
+                                    <p>Hadirkan produk dan layanan unggulan dengan standar tertinggi untuk kepuasan
+                                        pelanggan yang optimal.</p>
 
                                 </div>
 
@@ -635,7 +649,8 @@
                                     <h6 class="h6-lg">Customer-First</h6>
 
                                     <!-- Text -->
-                                    <p>Kami berkomitmen untuk menyediakan layanan yang memprioritaskan kebutuhan dan kepuasan pelanggan sebagai fokus utama.</p>
+                                    <p>Kami berkomitmen untuk menyediakan layanan yang memprioritaskan kebutuhan dan
+                                        kepuasan pelanggan sebagai fokus utama.</p>
 
                                 </div>
 

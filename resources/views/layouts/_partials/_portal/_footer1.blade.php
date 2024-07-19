@@ -11,8 +11,8 @@
                 <div class="fl-1">
 
                     <!-- Title -->
-                    <h6 class="d-title">SolTech</h6>
-                    <h6 class="m-title">SolTech</h6>
+                    <h6 class="d-title">Inti Shine Utama</h6>
+                    <h6 class="m-title">Inti Shine Utama</h6>
 
                     <!-- Links -->
                     <ul class="foo-links clearfix">
@@ -92,9 +92,9 @@
                         <li>
                             <p><a href="privacy.html">Privacy Policy</a></p>
                         </li> --}}
-                        <li>
+                        {{-- <li>
                             <p><a href="cookies.html">Cookie Policy</a></p>
-                        </li>
+                        </li> --}}
                     </ul>
 
                 </div> <!-- END FOOTER LINKS #4 -->

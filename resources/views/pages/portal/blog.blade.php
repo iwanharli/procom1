@@ -4,7 +4,7 @@
 
 @section('portal_content')
     <!-- BLOG LISTING
-                                                                               ============================================= -->
+                                                                                   ============================================= -->
     <section id="blog-page" class="pb-40 inner-page-hero blog-page-section division">
         <div class="container">
 
@@ -43,6 +43,11 @@
                     <!-- BLOG CONTENT -->
                     @foreach ($breakingBlog as $item)
                         <?php
+
+                        if (empty($item->post)) {
+                            continue;
+                        }
+
                         $date = date('Y-m-d', strtotime($item->post->published_at));
                         ?>
                         <div class="col-md-6 col-lg-4">
