@@ -100,7 +100,8 @@
                         <h2 class="h2-xl">Empower Your Business with Cutting-Edge IT Solutions</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Maksimalkan Potensi Bisnis Anda dengan Layanan Konsultasi IT Profesional.</p>
+                        <p class="p-xl">Tingkatkan efektivitas pemasaran Anda dengan pendekatan kami yang lebih cerdas dan
+                            efisien.</p>
 
                     </div>
                 </div>
@@ -272,10 +273,8 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6 col-lg-7">
                             <div class="bc-2-img right-column wow animate__animated animate__fadeInLeft">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}"
-                                    alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}"
-                                    alt="content-image">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
                             </div>
                         </div>
 
@@ -305,15 +304,20 @@
                 </div>
 
 
-                <!-- BLOG POSTS -->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <!-- BLOG POST -->
-                    @foreach ($headlines as $index => $item)
-                        <?php
-                        $date = date('Y-m-d', strtotime($item->post->published_at));
-                        ?>
-                        <div class="col">
-                            <div id="bp-1-{{ $index + 1 }}" class="blog-post wow animate__animated animate__fadeInUp">
+            <!-- BLOG POSTS -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <!-- BLOG POST -->
+                @foreach ($headlines as $index => $item)
+                    <?php
+
+                    if (empty($item->post)) {
+                        continue;
+                    }
+
+                    $date = date('Y-m-d', strtotime($item->post->published_at));
+                    ?>
+                    <div class="col">
+                        <div id="bp-1-{{ $index + 1 }}" class="blog-post wow animate__animated animate__fadeInUp">
 
                                 <!-- BLOG POST IMAGE -->
                                 <a href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
@@ -374,6 +378,48 @@
     @endif
     <!-- END BLOG-1 -->
 
+    <!-- DIVIDER LINE -->
+    <hr class="divider">
+
+    <!-- BRANDS-1 ============================================= -->
+    <div id="brands-1" class="pb-100 mt-50 brands-section">
+        <div class="container">
+
+
+            <!-- BRANDS TITLE -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-9">
+                    <div class="brands-title mt-3">
+                        <h6 class="h6-lg">Trusted by companies:</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- BRANDS CAROUSEL -->
+            <div class="row">
+                <div class="col text-center">
+                    <div class="owl-carousel brands-carousel-5">
+
+                        <!-- BRAND LOGO IMAGE -->
+                        @foreach ($client_files as $key => $value)
+                            <div class="brand-logo">
+                                <a href="#" class="lt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
+                                <a href="#" class="dt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
+                            </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div> <!-- END BRANDS CAROUSEL -->
+
+
+        </div> <!-- End container -->
+    </div>
+    <!-- END BRANDS-1 -->
+
 
     <!-- DIVIDER LINE -->
     <hr class="divider">
@@ -399,15 +445,27 @@
                 <div class="col-md-12">
                     <div class="filter-content">
 
+                        @php
+                            // $sizes = ['468x392', '468x392', '468x392', '468x392'];
+                            $counter = 0;
+                        @endphp
+
 
                         <!-- PROJECT #1 -->
                         @foreach ($portofolio as $item)
+                            @php
+                                // $currentSize = explode('x', $sizes[$counter % count($sizes)]);
+                                // $width = $currentSize[0];
+                                // $height = $currentSize[1];
+                                $counter++;
+                            @endphp
+
                             <div class="filter-item illustration branding">
                                 <div class="hover-overlay r-12">
                                     <!-- Image -->
 
                                     <img class="img-fluid" src="{{ Storage::url($item->post_image) }}"
-                                        style="height: auto !important; width: 100% !important;" alt="project-preview">
+                                        style="height: auto !important; width: 100%" alt="project-preview">
                                     <div class="item-overlay"></div>
 
                                     <!-- Project Category -->
