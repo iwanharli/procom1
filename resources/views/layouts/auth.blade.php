@@ -10,7 +10,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title> {{ $title }} - {{ $app->name ?? 'Default App Name' }}</title>
-        <link href="admin/css/styles.css" rel="stylesheet" />
+        <link href="{{ url('assets/_admin/css/styles.css') }}" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="{{ $app ? Storage::url($app->favicon) : asset('path/to/default/favicon.ico') }}"/>
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
                 @yield('main')
             </div>
             <div id="layoutAuthentication_footer">
-                @include('includes.auth-footer')
+                @include('layouts._partials._admin.auth-footer')
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

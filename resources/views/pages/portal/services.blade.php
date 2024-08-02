@@ -3,8 +3,7 @@
 @section('title', 'Our Services')
 
 @section('portal_content')
-    <!-- FEATURES-2
-                                    ============================================= -->
+    <!-- FEATURES-2 ============================================= -->
     <section id="features-2" class="py-100 mt-50 features-section division">
         <div class="container">
 
@@ -77,8 +76,7 @@
     </section>
     <!-- END FEATURES-2 -->
 
-    <!-- BOX CONTENT
-                                    ============================================= -->
+    <!-- BOX CONTENT ============================================= -->
     <section class="bc-01 ws-wrapper content-section">
         <div class="container">
             <div class="bc-01-wrapper bg--02 bg--fixed r-16">
@@ -130,8 +128,7 @@
     </section>
     <!-- END BOX CONTENT -->
 
-    <!-- INTEGRATIONS-4
-                                ============================================= -->
+    <!-- INTEGRATIONS-4 ============================================= -->
     <section id="integrations-4" class="pt-100 pb-100 integrations-section division">
         <div class="container">
 
@@ -164,7 +161,8 @@
                         <div class="col">
                             <a href="#">
                                 <div class="int_tool-4 r-12 wow animate__animated animate__fadeInUp">
-                                    <img class="img-fluid" src="{{ Storage::url('assets/stack/' . $value) }}" alt="tool-logo">
+                                    <img class="img-fluid" src="{{ Storage::url('assets/stack/' . $value) }}"
+                                        alt="tool-logo">
                                     <h6>{{ ucwords(str_replace('.png', '', $value)) }}</h6>
                                 </div>
                             </a>
@@ -193,6 +191,76 @@
         </div> <!-- End container -->
     </section>
     <!-- END INTEGRATIONS-4 -->
+
+    <!-- BOX CONTENT ============================================= -->
+    <section class="bc-01 ws-wrapper content-section">
+        <div class="container">
+            <div class="bc-01-wrapper bg--02 bg--fixed r-16">
+                <div class="section-overlay bg--fixed">
+                    <div class="row d-flex align-items-center">
+
+
+                        <!-- TEXT BLOCK -->
+                        <div class="col-md-7">
+                            <div class="txt-block right-column wow animate__animated animate__fadeInLeft"
+                                style="text-align: justify;">
+
+                                <!-- Section ID -->
+                                <span class="section-id">Strategies That Work</span>
+
+                                <!-- Title -->
+                                <h2>Software Development</h2>
+
+                                <!-- Text -->
+                                <p>
+                                    Pengembangan system yang komprehensif dan layanan pembuatan software profesional,
+                                    termasuk E-commerce dan berbagal, solust perangkat lunak aplikasi. Tim pengembang kami
+                                    yang berpengalaman menawarkan berbagai macam lavanan seperti Pengembangan software
+                                    Penjualan, Aplikasi Internal Perusahaan, Aplikasi Periklanan Digital, Sister Inventaris
+                                    Barang, dan Sistem Produksi.
+                                </p>
+
+                                <!-- Text -->
+                                <p>
+                                    Percayakan, kepada kami untuk memberikan solusi pengembangan perangkat lunak terbaik
+                                    untuk kebutuhan bisnis Anda.
+                                </p>
+
+                                <!-- Text -->
+                                <p class="mb-0">
+                                    Pengembangan system sangat cocok untuk bisnis/perusahaan, perkantoran, dan pemerintahan
+                                    yang ingin segera membangun eksistensi online.
+
+                                <ul class="mt-3" style="list-style-type:circle; margin-left: 10%; font-weight:200;">
+                                    <li>
+                                        Mobile Application Based
+                                        <ol type="1">
+                                            <li>Android</li>
+                                            <li>IOS</li>
+                                        </ol>
+                                    </li>
+                                    <li>Website Application Based</li>
+                                </ul>
+                                </p>
+
+                            </div>
+                        </div> <!-- END TEXT BLOCK -->
+
+
+                        <!-- IMAGE BLOCK -->
+                        <div class="col-md-5">
+                            <div class="img-block left-column wow animate__animated animate__fadeInRight">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/_portal/images/software.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/_portal/images/software.png') }}" alt="content-image">
+                            </div>
+                        </div>
+
+                    </div> <!-- End row -->
+                </div> <!-- End section overlay -->
+            </div> <!-- End content wrapper -->
+        </div> <!-- End container -->
+    </section>
+    <!-- END BOX CONTENT -->
 
     <!-- DIVIDER LINE -->
     <hr class="divider">

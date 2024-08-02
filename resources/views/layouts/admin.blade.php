@@ -15,8 +15,9 @@
     @stack('prepend-style')
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" rel="stylesheet" />
-    <link href="/admin/css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="{{ $app ? Storage::url($app->favicon) : asset('path/to/default/favicon.ico') }}" />
+    <link href="{{ url('assets/_admin/css/styles.css') }}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon"
+        href="{{ $app ? Storage::url($app->favicon) : asset('path/to/default/favicon.ico') }}" />
     @stack('addon-style')
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
@@ -29,14 +30,14 @@
 </head>
 
 <body class="nav-fixed">
-    @include('includes.navbar-admin')
+    @include('layouts._partials._admin.navbar-admin')
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            @include('includes.sidebar-admin')
+            @include('layouts._partials._admin.sidebar-admin')
         </div>
         <div id="layoutSidenav_content">
             @yield('container')
-            @include('includes.footer-admin')
+            @include('layouts._partials._admin.footer-admin')
         </div>
     </div>
     @stack('prepend-script')

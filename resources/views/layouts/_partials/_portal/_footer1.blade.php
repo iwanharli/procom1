@@ -11,13 +11,8 @@
                 <div class="fl-1">
 
                     <!-- Title -->
-<<<<<<< HEAD
                     <h6 class="d-title">{{ config('app.name') }}</h6>
                     <h6 class="m-title">{{ config('app.name') }}</h6>
-=======
-                    <h6 class="d-title">Inti Shine Utama</h6>
-                    <h6 class="m-title">Inti Shine Utama</h6>
->>>>>>> 920e98f4130d1d8ed08af70634d01d19cdd41cd9
 
                     <!-- Links -->
                     <ul class="foo-links clearfix">

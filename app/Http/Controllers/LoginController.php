@@ -12,7 +12,7 @@ class LoginController extends Controller
     {
         $app = App::where('id', '1')->first();
         
-        return view('login.index',[
+        return view('auth.index',[
             'title' => 'Login',
             'app' => $app,
         ]);
