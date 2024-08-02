@@ -11,8 +11,8 @@
                 <div class="fl-1">
 
                     <!-- Title -->
-                    <h6 class="d-title">SolTech</h6>
-                    <h6 class="m-title">SolTech</h6>
+                    <h6 class="d-title">{{ config('app.name') }}</h6>
+                    <h6 class="m-title">{{ config('app.name') }}</h6>
 
                     <!-- Links -->
                     <ul class="foo-links clearfix">

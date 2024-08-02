@@ -63,19 +63,17 @@
 
                         <li class="nl-simple {{ Route::currentRouteName() == 'services' ? 'active' : '' }}"
                             aria-haspopup="true">
-                            <a href="{{ route('services') }}" class="h-link">Services</a>
+                            <a href="{{ route('services') }}" class="h-link">Solutions</a>
                         </li>
-
-                        {{-- <li class="nl-simple" aria-haspopup="true">
-                            <a href="{{ route('careers') }}" class="h-link">Careers</a>
-                        </li> --}}
 
                         <li class="nl-simple {{ Route::currentRouteName() == 'faqs' ? 'active' : '' }}"
                             aria-haspopup="true">
                             <a href="{{ route('faqs') }}" class="h-link">FAQs</a>
                         </li>
 
-
+                        {{-- <li class="nl-simple" aria-haspopup="true">
+                            <a href="{{ route('careers') }}" class="h-link">Careers</a>
+                        </li> --}}
 
                         <!-- DROPDOWN SUB MENU -->
                         <!-- <li aria-haspopup="true">

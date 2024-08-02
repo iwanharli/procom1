@@ -19,8 +19,7 @@
                             <p class="p-md">Hubungi Kami untuk Informasi Lebih Lanjut tentang Layanan Pengembangan Software dan Keamanan IT.</p>
 
                             <!-- Button -->
-                            <a href="mailto:contact@intishineutama.com" class="btn btn-sm r-06 btn--theme hover--theme" data-bs-toggle="modal"
-                                data-bs-target="#modal-2">EMAIL : contact@intishineutama.com
+                            <a href="mailto:contact@intishineutama.com" class="btn btn-sm r-06 btn--theme hover--theme"> EMAIL : contact@intishineutama.com
                             </a>
 
                         </div>

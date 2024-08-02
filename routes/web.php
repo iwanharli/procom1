@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -12,6 +11,7 @@ use App\Http\Controllers\Portal\FaqsController;
 use App\Http\Controllers\Portal\IntegrationController;
 use App\Http\Controllers\Portal\PortofolioController;
 use App\Http\Controllers\Portal\ServicesController;
+use App\Http\Controllers\Portal\LanguageController;
 
 
 use App\Http\Controllers\Portal\NewsController;
@@ -89,6 +89,9 @@ Route::prefix('/')
         Route::get('/tag/{category:slug}', [HomeController::class, 'homeTag'])->name('home-tag');
         //Author
         Route::get('/author/{id}', [HomeController::class, 'author'])->name('author');
+
+        // LANG 
+        Route::post('/language-switch', [LanguageController::class, 'switchLanguage'])->name('language.switch');
     });
 
 

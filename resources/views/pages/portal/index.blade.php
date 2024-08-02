@@ -30,7 +30,7 @@
                 <!-- HERO IMAGE -->
                 <div class="col-md-6">
                     <div class="hero-1-img wow animate__animated animate__fadeInLeft">
-                        <img class="img-fluid" src="{{  asset('assets/imgs/dev.png') }}" alt="hero-image">
+                        <img class="img-fluid" src="{{ asset('assets/imgs/dev.png') }}" alt="hero-image">
                     </div>
                 </div>
 
@@ -40,8 +40,54 @@
     </section>
     <!-- END HERO-1 -->
 
+
+    <!-- BRANDS-1 ============================================= -->
+    <div id="brands-1" class="pb-40 mt-50 brands-section">
+        <div class="container">
+
+
+            <!-- BRANDS TITLE -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-9">
+                    <div class="brands-title mt-3">
+                        <h6 class="h6-lg">Trusted by companies:</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- BRANDS CAROUSEL -->
+            <div class="row">
+                <div class="col text-center">
+                    <div class="owl-carousel brands-carousel-5">
+
+                        <!-- BRAND LOGO IMAGE -->
+                        @foreach ($client_files as $key => $value)
+                            <div class="brand-logo">
+                                <a href="#" class="lt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
+                                <a href="#" class="dt-img"><img class="img-fluid"
+                                        src="{{ Storage::url('assets/clients/' . $value) }}" alt="brand-logo"></a>
+                            </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div> <!-- END BRANDS CAROUSEL -->
+
+
+        </div> <!-- End container -->
+    </div>
+    <!-- END BRANDS-1 -->
+
+
+    <!-- DIVIDER LINE -->
+    <hr class="divider">
+
+
+    
     <!-- FEATURES-10 ============================================= -->
-    <section id="features-10" class="pt-50 features-section">
+    <section id="features-10" class="pt-30 features-section">
         <div class="container">
 
 
@@ -51,10 +97,10 @@
                     <div class="section-title mb-70">
 
                         <!-- Title -->
-                        <h2 class="h2-xl">Handling your marketing needs in a better way</h2>
+                        <h2 class="h2-xl">Empower Your Business with Cutting-Edge IT Solutions</h2>
 
                         <!-- Text -->
-                        <p class="p-xl">Tingkatkan efektivitas pemasaran Anda dengan pendekatan kami yang lebih cerdas dan efisien.</p>
+                        <p class="p-xl">Maksimalkan Potensi Bisnis Anda dengan Layanan Konsultasi IT Profesional.</p>
 
                     </div>
                 </div>
@@ -87,12 +133,14 @@
 
                                     <li class="list-item">
                                         <p>
-                                            Ubah data menjadi wawasan berharga untuk keputusan yang lebih cerdas dan strategis.
+                                            Ubah data menjadi wawasan berharga untuk keputusan yang lebih cerdas dan
+                                            strategis.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Maksimalkan efisiensi dan keuntungan bisnis Anda dengan solusi BI kami yang canggih.
+                                        <p class="mb-0">Maksimalkan efisiensi dan keuntungan bisnis Anda dengan solusi BI
+                                            kami yang canggih.
                                         </p>
                                     </li>
 
@@ -139,7 +187,8 @@
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Tingkatkan hasil pemasaran Anda dengan integrasi yang mulus dan strategi yang terkoordinasi.
+                                        <p class="mb-0">Tingkatkan hasil pemasaran Anda dengan integrasi yang mulus dan
+                                            strategi yang terkoordinasi.
                                         </p>
                                     </li>
 
@@ -152,8 +201,8 @@
                             <div class="fbox-10-img text-center">
                                 <img class="img-fluid lt-img" src="{{ asset('assets/imgs/socmed.png') }}"
                                     alt="feature-image">
-                                <img class="img-fluid dt-img"
-                                    src="{{ asset('assets/imgs/socmed.png') }}" alt="feature-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/socmed.png') }}"
+                                    alt="feature-image">
                             </div>
 
 
@@ -196,12 +245,14 @@
                                 <ul class="simple-list">
 
                                     <li class="list-item">
-                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda di bidang IT Security dan Software Development.
+                                        <p> Dapatkan solusi yang dirancang untuk mendorong kesuksesan bisnis Anda di bidang
+                                            IT Security dan Software Development.
                                         </p>
                                     </li>
 
                                     <li class="list-item">
-                                        <p class="mb-0">Optimalkan keamanan sistem dan pengembangan perangkat lunak Anda dengan solusi yang canggih dan terpercaya.
+                                        <p class="mb-0">Optimalkan keamanan sistem dan pengembangan perangkat lunak Anda
+                                            dengan solusi yang canggih dan terpercaya.
                                         </p>
                                     </li>
 
@@ -239,128 +290,89 @@
     <!-- END BOX CONTENT -->
 
     <!-- BLOG-1 ============================================= -->
-    <section id="blog-1" class="pt-100 pb-60 blog-section division">
-        <div class="container">
+    @if (!empty($headlines))
+        <section id="blog-1" class="pt-100 pb-60 blog-section division">
+            <div class="container">
 
 
-            <!-- SECTION TITLE -->
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-9">
-                    <div class="section-title mb-70">
-                        <h2 class="h2-lg">Articles & Insights</h2>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- BLOG POSTS -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                <!-- BLOG POST -->
-                @foreach ($headlines as $index => $item)
-                    <?php
-                    $date = date('Y-m-d', strtotime($item->post->published_at));
-                    ?>
-                    <div class="col">
-                        <div id="bp-1-{{ $index + 1 }}" class="blog-post wow animate__animated animate__fadeInUp">
-
-                            <!-- BLOG POST IMAGE -->
-                            <a href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
-                                <div class="blog-post-img r-12">
-                                    <div class="hover-overlay">
-                                        <img class="img-fluid" src="{{ Storage::url($item->post->post_image) }}"
-                                            style="max-width: 110% !important;" alt="blog-post-image">
-                                        <div class="item-overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- BLOG POST TEXT -->
-                            <div class="blog-post-txt">
-
-                                <!-- Post Meta -->
-                                <div class="blog-post-meta">
-                                    <ul class="post-meta-list ico-10">
-                                        <li>
-                                            <p class="p-sm">
-                                                {{ $item->post->category->name }}
-                                            </p>
-                                        </li>
-                                        <li class="meta-list-divider">
-                                            <p><span class="flaticon-minus-1"></span></p>
-                                        </li>
-                                        <li>
-                                            <p class="p-sm">
-                                                {{ date('d F Y', strtotime($item->post->published_at)) }}
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Post Link -->
-                                <h5>
-                                    <a href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
-                                        {{ $item->post->post_title }}
-                                    </a>
-                                </h5>
-
-                                <!-- Short Description -->
-                                <p>{{ $item->post->post_teaser }}</p>
-
-                            </div> <!-- END BLOG POST TEXT -->
-
+                <!-- SECTION TITLE -->
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-9">
+                        <div class="section-title mb-70">
+                            <h2 class="h2-lg">Articles & Insights</h2>
                         </div>
                     </div>
-                @endforeach
-                <!-- END  BLOG POST -->
-            </div>
-            <!-- END BLOG POSTS -->
-
-
-        </div>
-    </section>
-    <!-- END BLOG-1 -->
-
-    <!-- DIVIDER LINE -->
-    <hr class="divider">
-
-    <!-- BRANDS-1 ============================================= -->
-    <div id="brands-1" class="pb-100 mt-50 brands-section">
-        <div class="container">
-
-
-            <!-- BRANDS TITLE -->
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-9">
-                    <div class="brands-title mt-3">
-                        <h6 class="h6-lg">Trusted by companies:</h6>
-                    </div>
                 </div>
-            </div>
 
 
-            <!-- BRANDS CAROUSEL -->
-            <div class="row">
-                <div class="col text-center">
-                    <div class="owl-carousel brands-carousel-5">
+                <!-- BLOG POSTS -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <!-- BLOG POST -->
+                    @foreach ($headlines as $index => $item)
+                        <?php
+                        $date = date('Y-m-d', strtotime($item->post->published_at));
+                        ?>
+                        <div class="col">
+                            <div id="bp-1-{{ $index + 1 }}" class="blog-post wow animate__animated animate__fadeInUp">
 
-                            <!-- BRAND LOGO IMAGE -->
-                        @foreach ($client_files as $key => $value)
-                            <div class="brand-logo">
-                                <a href="#" class="lt-img"><img class="img-fluid"
-                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
-                                <a href="#" class="dt-img"><img class="img-fluid"
-                                        src="{{ Storage::url('assets/clients/'.$value) }}" alt="brand-logo"></a>
+                                <!-- BLOG POST IMAGE -->
+                                <a href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
+                                    <div class="blog-post-img r-12">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{ Storage::url($item->post->post_image) }}"
+                                                style="max-width: 110% !important;" alt="blog-post-image">
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- BLOG POST TEXT -->
+                                <div class="blog-post-txt">
+
+                                    <!-- Post Meta -->
+                                    <div class="blog-post-meta">
+                                        <ul class="post-meta-list ico-10">
+                                            <li>
+                                                <p class="p-sm">
+                                                    {{ $item->post->category->name }}
+                                                </p>
+                                            </li>
+                                            <li class="meta-list-divider">
+                                                <p><span class="flaticon-minus-1"></span></p>
+                                            </li>
+                                            <li>
+                                                <p class="p-sm">
+                                                    {{ date('d F Y', strtotime($item->post->published_at)) }}
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Post Link -->
+                                    <h5>
+                                        <a
+                                            href="{{ route('blog.detail', ['date' => $date, 'slug' => $item->post->slug]) }}">
+                                            {{ $item->post->post_title }}
+                                        </a>
+                                    </h5>
+
+                                    <!-- Short Description -->
+                                    <p>{{ $item->post->post_teaser }}</p>
+
+                                </div> <!-- END BLOG POST TEXT -->
+
                             </div>
-                        @endforeach
-
-                    </div>
+                        </div>
+                    @endforeach
+                    <!-- END  BLOG POST -->
                 </div>
-            </div> <!-- END BRANDS CAROUSEL -->
+                <!-- END BLOG POSTS -->
 
 
-        </div> <!-- End container -->
-    </div>
-    <!-- END BRANDS-1 -->
+            </div>
+        </section>
+    @endif
+    <!-- END BLOG-1 -->
 
 
     <!-- DIVIDER LINE -->
@@ -387,28 +399,15 @@
                 <div class="col-md-12">
                     <div class="filter-content">
 
-                        @php
-                            $sizes = ['468x448', '468x392', '468x392', '468x336'];
-                            $counter = 0;
-                        @endphp
-
 
                         <!-- PROJECT #1 -->
                         @foreach ($portofolio as $item)
-                            @php
-                                $currentSize = explode('x', $sizes[$counter % count($sizes)]);
-                                $width = $currentSize[0];
-                                $height = $currentSize[1];
-                                $counter++;
-                            @endphp
-
                             <div class="filter-item illustration branding">
                                 <div class="hover-overlay r-12">
                                     <!-- Image -->
-                                    {{-- {{ $width }} {{ $height }} --}}
 
                                     <img class="img-fluid" src="{{ Storage::url($item->post_image) }}"
-                                        style="height: {{ $height }}px !important;" alt="project-preview">
+                                        style="height: auto !important; width: 100% !important;" alt="project-preview">
                                     <div class="item-overlay"></div>
 
                                     <!-- Project Category -->
@@ -486,19 +485,22 @@
                         <h2>Why do people choose Us?</h2>
 
                         <!-- Text -->
-                        <p>Kami dipilih karena komitmen kami dalam memberikan solusi yang tepat dan terpercaya untuk setiap kebutuhan bisnis Anda.
+                        <p>Kami dipilih karena komitmen kami dalam memberikan solusi yang tepat dan terpercaya untuk setiap
+                            kebutuhan bisnis Anda.
                         </p>
 
                         <!-- List -->
                         <ul class="simple-list">
 
                             <li class="list-item">
-                                <p>Kami berkomitmen untuk memberikan layanan terbaik dengan fokus pada kepuasan pelanggan dan inovasi yang berkelanjutan.
+                                <p>Kami berkomitmen untuk memberikan layanan terbaik dengan fokus pada kepuasan pelanggan
+                                    dan inovasi yang berkelanjutan.
                                 </p>
                             </li>
 
                             <li class="list-item">
-                                <p class="mb-0">Dengan pengalaman dan keahlian yang mendalam, kami siap membantu Anda mencapai tujuan bisnis Anda dengan lebih baik.
+                                <p class="mb-0">Dengan pengalaman dan keahlian yang mendalam, kami siap membantu Anda
+                                    mencapai tujuan bisnis Anda dengan lebih baik.
                                 </p>
                             </li>
 
@@ -570,7 +572,8 @@
                                     <h6 class="h6-lg">Experience</h6>
 
                                     <!-- Text -->
-                                    <p>Manfaatkan keahlian kami dalam menyediakan solusi yang terbukti untuk mengoptimalkan operasi bisnis Anda.</p>
+                                    <p>Manfaatkan keahlian kami dalam menyediakan solusi yang terbukti untuk mengoptimalkan
+                                        operasi bisnis Anda.</p>
 
                                 </div>
 
@@ -606,7 +609,8 @@
                                     <h6 class="h6-lg">Quality</h6>
 
                                     <!-- Text -->
-                                    <p>Hadirkan produk dan layanan unggulan dengan standar tertinggi untuk kepuasan pelanggan yang optimal.</p>
+                                    <p>Hadirkan produk dan layanan unggulan dengan standar tertinggi untuk kepuasan
+                                        pelanggan yang optimal.</p>
 
                                 </div>
 
@@ -635,7 +639,8 @@
                                     <h6 class="h6-lg">Customer-First</h6>
 
                                     <!-- Text -->
-                                    <p>Kami berkomitmen untuk menyediakan layanan yang memprioritaskan kebutuhan dan kepuasan pelanggan sebagai fokus utama.</p>
+                                    <p>Kami berkomitmen untuk menyediakan layanan yang memprioritaskan kebutuhan dan
+                                        kepuasan pelanggan sebagai fokus utama.</p>
 
                                 </div>
 
