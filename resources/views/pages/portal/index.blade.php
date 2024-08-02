@@ -30,7 +30,7 @@
                 <!-- HERO IMAGE -->
                 <div class="col-md-6">
                     <div class="hero-1-img wow animate__animated animate__fadeInLeft">
-                        <img class="img-fluid" src="{{ asset('assets/imgs/dev.png') }}" alt="hero-image">
+                        <img class="img-fluid" src="{{ asset('assets/_admin/imgs/dev.png') }}" alt="hero-image">
                     </div>
                 </div>
 
@@ -152,9 +152,9 @@
 
                             <!-- IMAGE -->
                             <div class="fbox-10-img text-center">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/analysis.png') }}"
+                                <img class="img-fluid lt-img" src="{{ asset('assets/_admin/imgs/analysis.png') }}"
                                     alt="feature-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/analysis.png') }}"
+                                <img class="img-fluid dt-img" src="{{ asset('assets/_admin/imgs/analysis.png') }}"
                                     alt="feature-image">
                             </div>
 
@@ -200,9 +200,9 @@
 
                             <!-- IMAGE -->
                             <div class="fbox-10-img text-center">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/socmed.png') }}"
+                                <img class="img-fluid lt-img" src="{{ asset('assets/_admin/imgs/socmed.png') }}"
                                     alt="feature-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/socmed.png') }}"
+                                <img class="img-fluid dt-img" src="{{ asset('assets/_admin/imgs/socmed.png') }}"
                                     alt="feature-image">
                             </div>
 
@@ -273,8 +273,8 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6 col-lg-7">
                             <div class="bc-2-img right-column wow animate__animated animate__fadeInLeft">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/it.png') }}" alt="content-image">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/_admin/imgs/it.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/_admin/imgs/it.png') }}" alt="content-image">
                             </div>
                         </div>
 

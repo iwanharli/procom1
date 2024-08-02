@@ -87,8 +87,8 @@
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6">
                             <div class="img-block left-column wow animate__animated animate__fadeInRight">
-                                <img class="img-fluid lt-img" src="{{ asset('assets/imgs/tech.png') }}" alt="content-image">
-                                <img class="img-fluid dt-img" src="{{ asset('assets/imgs/tech.png') }}" alt="content-image">
+                                <img class="img-fluid lt-img" src="{{ asset('assets/_admin/imgs/tech.png') }}" alt="content-image">
+                                <img class="img-fluid dt-img" src="{{ asset('assets/_admin/imgs/tech.png') }}" alt="content-image">
                             </div>
                         </div>
 
